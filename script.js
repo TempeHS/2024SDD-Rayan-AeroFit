@@ -1,13 +1,14 @@
 function submitValues() {
     var stepGoal = document.getElementById("stepGoal");
-    var calGoal = document.getElementById("calorieGoal");  
+    var calGoal = document.getElementById("calGoal");
 
-    if (!stepGoal.value || !calGoal.value) {
-        alert("Enter both Step and Calorie Goal.");
+    var stepGoalValue = parseInt(stepGoal.value);
+    var calGoalValue = parseInt(calGoal.value);
 
-      }
+    if (isNaN(stepGoalValue) || isNaN(calGoalValue)) {
+        alert("No Empty Spaces. Only Type In Numbers");
+        return;
+    }
+
+    alert(stepGoalValue);
 }
-var stepGoal = parseInt(stepGoalInput.value);
-var calorieGoal = parseInt(calorieGoalInput.value);
-
-
