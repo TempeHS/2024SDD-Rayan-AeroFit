@@ -12,5 +12,4 @@ Product Deliverables
 10. Use Accelerometer API to sensibly track steps.
 11. Make it so that the Goal Setup page only opens for new users.
 12. Add Historical Step Data to the personal records 
-13. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT 
-14. 
+13. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
