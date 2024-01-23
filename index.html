@@ -7,8 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
-    .btn {margin-top:50px;}
-
+    .btn {margin-top:23px;}
+    .input-box {margin-top: 0px;}
+    .goalheading {padding-top: 40px ;}
+    .img {padding-top: 40px;}
     </style>
 </head>
   <body>
@@ -17,8 +19,8 @@
           <div class="col-sm-12 col-md-4 col-lg-3">
             <img src="images/AeroFit Logo.png" class="img-fluid">
           </div>
-          <div class="col-sm-12 col-md-8 col-lg-9">
-            <h1>AeroFit</h1>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h1 class="goalheading">What are your goals?</h1>
           </div>
         </div>
       </div>
@@ -30,12 +32,16 @@
           <input type="number" class="form-control" id="stepGoal" placeholder="Enter Step Goal">
         </div>
       </div>
+      </div>
+      <div class="row">
       <div class="col">
         <div class="input-box">
           <label for="calorieGoal">Calorie Goal</label>
           <input type="number" class="form-control" id="calorieGoal" placeholder="Enter Calorie Goal">
         </div>
       </div>
+      </div>
+      <div class="row">
       <div class="col">
         <button type="button" class="btn btn-dark" onclick="submitValues()">Submit</button>
       </div>
