@@ -14,3 +14,5 @@ Product Deliverables
 12. Add Historical Step Data to the personal records 
 13. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
 14. Error Messages (Feedback to User)
+15. Add local storage system for goals 
+
