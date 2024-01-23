@@ -1,7 +1,7 @@
 # Product Backlog
 Product Deliverables
 1. ~~Design an app logo~~
-2.~~Create a Goal Setup Page with three boxes. Two boxes for typing in numerical step and calorie goals, and a third for submitting them.~~
+2.~~Create a Goal Setup Page with three boxes. Two boxes for typing in numerical step and calorie goals, and a third for submitting them.~~ 
 3. Create a Home Page with four boxes. Two which display amount of daily steps taken and calories burned. And another two which display the users step and calorie goals in order to measure progress
 4. Create an on-screen navigation system which allows users to switch between the pages.
 5. Create and attach relevant and simplistic icons for each element on the navigation system
@@ -12,3 +12,5 @@ Product Deliverables
 10. Use Accelerometer API to sensibly track steps.
 11. Make it so that the Goal Setup page only opens for new users.
 12. Add Historical Step Data to the personal records 
+13. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT 
+14. 
