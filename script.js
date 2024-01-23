@@ -1,12 +1,13 @@
 function submitValues() {
-    var stepGoalInput = document.getElementById("stepGoal");
-    var calorieGoalInput = document.getElementById("calorieGoal");  
+    var stepGoal = document.getElementById("stepGoal");
+    var calGoal = document.getElementById("calorieGoal");  
 
-    if (!stepGoalInput.value || !calorieGoalInput.value) {
-        alert("Enter both Step Goal and Calorie Goal.");
-        return;
+    if (!stepGoal.value || !calGoal.value) {
+        alert("Enter both Step and Calorie Goal.");
+
       }
 }
-if (!isInteger(stepGoalInput.value) || !isInteger(calorieGoalInput.value)) {
-    alert("Please enter valid integer values for Step Goal and Calorie Goal.");
-  }
+var stepGoal = parseInt(stepGoalInput.value);
+var calorieGoal = parseInt(calorieGoalInput.value);
+
+
