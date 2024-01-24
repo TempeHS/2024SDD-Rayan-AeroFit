@@ -13,9 +13,17 @@
     color:white;
     border-radius: 6px; 
 }
+.form-control {
+        border: 2px solid #9a9a9c; 
+        border-radius: 8px; 
+        padding: 10px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
 .btn {margin-top:29px;
     padding: 20px 20px;
-    position:relative; top:-10px;
+    position:relative; top:-13px;
     }
     .input-box {margin-top: 0px;}
     .stepheading {padding-top: 40px ;}
@@ -84,6 +92,8 @@
    
 .goaleditheading{text-align: center;
     padding-top:30px;
+    font-size: 28px;
+    padding-bottom:10px;
 }
    
    </style>
@@ -97,7 +107,7 @@
             <img src="images/AeroFit Logo.png" class="img-fluid">
           </div>
   <div class="col-sm-12 col-md-12 col-lg-12">
-    <h1 class="goalheading">Current Goals </h1>
+    <h1 class="goalheading">Daily Goals </h1>
   </div>
   <div id="stepGoalBox" class="gna-box">
     <h1 class="na-text">N/A</h1>
@@ -107,7 +117,7 @@
 <h1 class="na2-text">N/A</h1>
 </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <h1 class="goaleditheading">Edit daily goals</h1>
+            <h1 class="goaleditheading">Edit goals</h1>
           </div>
         </div>
       </div>
@@ -115,7 +125,7 @@
     <div class="row">
       <div class="col">
         <div class="input-box">
-          <label for="stepGoal">Steps Taken Goal</label>
+          <label for="stepGoal">Step Goal</label>
           <input type="number" class="form-control" id="stepGoal" placeholder="Edit Step Goal">
         </div>
       </div>
@@ -123,7 +133,7 @@
       <div class="row">
       <div class="col">
         <div class="input-box">
-          <label for="calGoal">Calories Burnt Goal</label>
+          <label for="calGoal">Cals Burnt Goal</label>
           <input type="number" class="form-control" id="calGoal" placeholder="Edit Calorie Goal">
         </div>
       </div>
