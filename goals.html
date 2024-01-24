@@ -1,1 +1,76 @@
-Goals
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AeroFit</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="globalStyle.css">
+    <style>
+    .btn {margin-top:23px;}
+    .input-box {margin-top: 0px;}
+    .goalheading {padding-top: 40px ;}
+    .img-fluid {padding-top: 15px;
+    width: 80%; 
+    }
+   
+    .form-control {
+        border: 2px solid #9a9a9c; 
+        border-radius: 8px; 
+        padding: 10px;
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      label {
+        padding-top: 30px;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+      }
+   
+   
+   </style>
+</head>
+  <body>
+    <div class="container text-center">
+        <div class="row">
+          <div class="col-sm-12 col-md-4 col-lg-3">
+            <img src="images/AeroFit Logo.png" class="img-fluid">
+          </div>
+          <div class="col-sm-12 col-md-12 col-lg-12">
+            <h1 class="goalheading">Set your daily goals</h1>
+          </div>
+        </div>
+      </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <div class="input-box">
+          <label for="stepGoal">Steps Taken Goal</label>
+          <input type="number" class="form-control" id="stepGoal" placeholder="Enter Step Goal">
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col">
+        <div class="input-box">
+          <label for="calGoal">Calories Burnt Goal</label>
+          <input type="number" class="form-control" id="calGoal" placeholder="Enter Calorie Goal">
+        </div>
+      </div>
+      </div>
+      <div class="row">
+      <div class="col">
+        <a href="home.html">
+        <button type="button" class="btn btn-dark" onclick="submitValues()">Submit</button>
+      </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+</html>
