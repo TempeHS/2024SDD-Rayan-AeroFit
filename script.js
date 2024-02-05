@@ -15,3 +15,12 @@ function submitValues() {
 
     window.location.href = "home.html";
 }
+
+
+// check for Geolocation support
+if (navigator.geolocation) {
+    alert('Geolocation is supported');
+  }
+  else {
+    alert('Geolocation is not supported for this Browser/OS version.');
+  }
