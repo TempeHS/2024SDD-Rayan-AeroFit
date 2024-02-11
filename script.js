@@ -16,7 +16,6 @@ function submitValues() {
     window.location.href = "home.html";
 }
 
-
 // check for Geolocation support
 if (navigator.geolocation) {
     alert('Geolocation is supported');
