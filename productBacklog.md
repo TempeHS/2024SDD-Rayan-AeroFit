@@ -10,9 +10,12 @@ Product Deliverables
 8. Create a Logbook Page where users can view and input their daily notes. 
 9. Add a Date System for the fitness diary entries, printing the current date of each entry.
 10. Use Accelerometer API to sensibly track steps.
-11. Make it so that the Goal Setup page only opens for new users.
-12. Add Historical Step Data to the personal records 
-13. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
-14. ~~Error Messages (Feedback to User)~~
-15.~~ Add local storage system for goals~~
+11. Add a live goal progress bar that is synchronised with stepCount
+12. Make it so that the Goal Setup page only opens for new users.
+13. Add Historical Step Data to the personal records 
+14. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
+15. ~~Error Messages (Feedback to User)~~
+16.~~ Add local storage system for goals~~
+17. Use a basic calorie to step ratio to estimate cals burnt.
+
 
