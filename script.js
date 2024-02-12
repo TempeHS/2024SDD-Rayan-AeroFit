@@ -15,11 +15,20 @@ function submitValues() {
 
     window.location.href = "home.html";
 }
-
-// check for Geolocation support
-if (navigator.geolocation) {
-    alert('Geolocation is supported');
+function requestMotionPermissions() {
+  // Request Motion permissions for devices
+  if (typeof DeviceMotionEvent.requestPermission === 'function') {
+      DeviceMotionEvent.requestPermission()
+          .then(permissionState => {
+              if (permissionState === 'granted') {
+                  startStepTracking();
+              } else {
+                  alert("Permission not granted for motion tracking");
+              }
+          })
+          .catch(console.error);
+  } else {
+      // Automatically start tracking on devices not requiring permission
+      startStepTracking();
   }
-  else {
-    alert('Geolocation is not supported for this Browser/OS version.');
-  }
+}
