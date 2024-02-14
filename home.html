@@ -148,6 +148,16 @@ var accelLimit = 12; // Adjusted for better accuracy
 var lastUpdate = 0;
 var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    updateStepCount(); // Updates step count display when my page loads
+    startStepTracking(); // Calls step tracking function
+});
+
+function updateStepCount() { 
+    document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
+}
+
+
 
 function startStepTracking() {
     window.addEventListener('devicemotion', (event) => { //
@@ -164,6 +174,7 @@ function startStepTracking() {
         }
     });
 }
+
 
 
 
