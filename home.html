@@ -142,6 +142,31 @@
     <script src="script.js"></script>
 <script>
 
+var stepCount = 0;
+// Step detection settings
+var accelLimit = 12; // Adjusted for better accuracy
+var lastUpdate = 0;
+var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
+
+
+function startStepTracking() {
+    window.addEventListener('devicemotion', (event) => { //
+        var currentTime = new Date().getTime(); // Current time in ms 
+        // Checks 3D Acceleration data
+        if (currentTime - lastUpdate > minTimeBetweenSteps) { // Ensures Step Delay is Met
+            var accel = event.acceleration; // XYZ Acceleration measured
+            var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
+            if (totalAccel > accelLimit) { 
+                stepCount++;
+                updateStepCount(); // Updates step count display
+                lastUpdate = currentTime;
+            }
+        }
+    });
+}
+
+
+
 
 //Get values from local storage
     var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
