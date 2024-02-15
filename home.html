@@ -157,8 +157,6 @@ function updateStepCount() {
     document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
 
-
-
 function startStepTracking() {
     window.addEventListener('devicemotion', (event) => { //
         var currentTime = new Date().getTime(); // Current time in ms 
@@ -174,10 +172,6 @@ function startStepTracking() {
         }
     });
 }
-
-
-
-
 
 //Get values from local storage
     var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
