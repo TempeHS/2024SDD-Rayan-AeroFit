@@ -18,4 +18,5 @@ Product Deliverables
 16.~~ Add local storage system for goals~~
 17. Use a basic calorie to step ratio to estimate cals burnt.
 18. Error messages force you to retry input until no error is detected. 
+19. 
 

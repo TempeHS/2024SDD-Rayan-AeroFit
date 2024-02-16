@@ -173,6 +173,24 @@ function startStepTracking() {
     });
 }
 
+function requestMotionPermissions() {
+    // Request Motion permissions for IOS
+    if (typeof DeviceMotionEvent.requestPermission === 'function') {
+        DeviceMotionEvent.requestPermission()
+            .then(permissionState => {
+                if (permissionState === 'granted') {
+                    startStepTracking();
+                } else {
+                    alert("Permission not granted for motion tracking");
+                }
+            })
+            .catch(console.error);
+    } else {
+        // Automatically start tracking on devices not requiring permission
+        startStepTracking();
+    }
+}
+
 //Get values from local storage
     var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
     var calGoalValue = parseInt(localStorage.getItem("calGoal"));
