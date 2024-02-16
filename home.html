@@ -168,12 +168,15 @@ var accelLimit = 12; // Adjusted for better accuracy
 var lastUpdate = 0;
 var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
 
-function displayButtonOnMobile() {
-if (window.innerWidth <= 900 && permissionState !== 'granted') {
+function checkPermissions() {
+var permissionGranted = localStorage.getItem('motionPermissionsGranted');
+  if (window.innerWidth <= 900 && permissionGranted !== 'true') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
+
 }
 }
-window.onload = displayButtonOnMobile;
+window.onload = checkPermissions();
+;
 
 
 
@@ -220,6 +223,7 @@ function requestMotionPermissions() {
             .then(permissionState => {
                 if (permissionState === 'granted') {
                     startStepTracking();
+                    localStorage.setItem('motionPermissionsGranted', 'true'); // Saves Motion Permission In Local Storage
                     hideMotionRequest();
                 } else {
                     alert("Permission not granted for motion tracking");
