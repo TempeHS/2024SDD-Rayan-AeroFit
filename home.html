@@ -227,6 +227,7 @@ function requestMotionPermissions() {
                     hideMotionRequest();
                 } else {
                     alert("Permission not granted for motion tracking");
+                    requestMotionPermissions();
                 }
             })
             .catch(console.error);
