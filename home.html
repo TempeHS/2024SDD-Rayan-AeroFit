@@ -163,7 +163,6 @@ document.getElementById('permissionButton').addEventListener('click', function()
 });
 
 
-
 document.addEventListener('DOMContentLoaded', (event) => {
   updateStepCount(); // Updates step count display when my page loads
   startStepTracking(); // Calls step tracking function
@@ -178,7 +177,7 @@ function startStepTracking() {
         var currentTime = new Date().getTime(); // Current time in ms 
         // Checks 3D Acceleration data
         if (currentTime - lastUpdate > minTimeBetweenSteps) { // Ensures Step Delay is Met
-            var accel = event.acceleration; // XYZ Acceleration measured
+            var accel = event.accelerationIncludingGravity; // XYZ Acceleration measured
             var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
             if (totalAccel > accelLimit) { 
                 stepCount++;
