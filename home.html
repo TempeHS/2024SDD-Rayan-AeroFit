@@ -169,7 +169,7 @@ var lastUpdate = 0;
 var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
 
 function displayButtonOnMobile() {
-if (window.innerWidth <= 900) {
+if (window.innerWidth <= 900 && permissionState !== 'granted') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
 }
 }
