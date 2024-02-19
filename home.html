@@ -247,6 +247,10 @@ function requestMotionPermissions() {
   function updateStepGoalBox() {
     if (!isNaN(stepGoalValue)) {
       var progressPercentage = (stepCount / stepGoalValue) * 100; // Basic Percentage Formual
+      //Ensures progressPercentage doesn't exceed 100% 
+      if (progressPercentage > 100) {
+            progressPercentage = 100;
+        }
       // Sets progress-bar width to progressPercentage
       document.getElementById("stepGoalBox").innerHTML = `
         <h1 class='na-text'>${stepGoalValue} Steps</h1>
