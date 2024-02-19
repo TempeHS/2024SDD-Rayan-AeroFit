@@ -226,8 +226,7 @@ function requestMotionPermissions() {
                     localStorage.setItem('motionPermissionsGranted', 'true'); // Saves Motion Permission In Local Storage
                     hideMotionRequest();
                 } else {
-                    alert("Permission not granted for motion tracking");
-                    requestMotionPermissions();
+                    alert("Permission not granted. Please fully close site, and then reopen it.");
                 }
             })
             .catch(console.error);
