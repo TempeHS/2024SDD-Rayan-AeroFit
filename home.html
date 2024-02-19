@@ -204,6 +204,7 @@ function startStepTracking() {
             if (totalAccel > accelLimit) { 
                 stepCount++;
                 updateStepCount(); // Updates step count display
+                updateStepGoalBox()
                 lastUpdate = currentTime;
             }
         }
@@ -242,6 +243,8 @@ function requestMotionPermissions() {
     var calGoalValue = parseInt(localStorage.getItem("calGoal"));
 
 //Display step goals w/ progress in stepGoal box
+    
+  function updateStepGoalBox() {
     if (!isNaN(stepGoalValue)) {
       var progressPercentage = (stepCount / stepGoalValue) * 100; // Basic Percentage Formual
       // Sets progress-bar width to progressPercentage
@@ -252,6 +255,7 @@ function requestMotionPermissions() {
         </div>
     `;
       }
+    }
 //Display calorie values in my goal box
     if (!isNaN(stepGoalValue)) {
         document.getElementById("calGoalBox").innerHTML = "<h1 class='na2-text'>" + calGoalValue + " Cals" + "</h1>";
