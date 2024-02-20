@@ -9,16 +9,16 @@ Product Deliverables
 7. Create a Personal Records page which displays all-time steps taken/calories burnt, along with most calories burnt/steps taken in a 24Hour period
 8. Create a Logbook Page where users can view and input their daily notes. 
 9. Add a Date System for the fitness diary entries, printing the current date of each entry.
-10. Use Accelerometer API to sensibly track steps.
+10. ~~Use Accelerometer API to sensibly track steps.~~
 11. ~~Add a live goal progress bar that is synchronised with stepCount~~
 12. Make it so that the Goal Setup page only opens for new users.
 13. Add Historical Step Data to the personal records 
 14. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
 15. ~~Error Messages (Feedback to User)~~
 16.~~ Add local storage system for goals~~
-17. Use a basic calorie to step ratio to estimate cals burnt.
+17. ~~Use a basic calorie to step ratio to estimate cals burnt.~~
 18. Error messages force you to retry input until no error is detected. 
-19. Add local storage system for stepCount
+19. Add local storage system for stepCount and calCount
 20. ~~Add local storage system for Motion Permissions~~
 21. Add animation for reaching stepGoal
 22. Add option for users to add their weight, for more accurate calorie conversions. 
