@@ -20,4 +20,7 @@ Product Deliverables
 18. Error messages force you to retry input until no error is detected. 
 19. Add local storage system for stepCount
 20. ~~Add local storage system for Motion Permissions~~
+21. Add animation for reaching stepGoal
+22. Add option for users to add their weight, for more accurate calorie conversions. 
+
 
