@@ -245,7 +245,6 @@ function requestMotionPermissions() {
     var calGoalValue = parseInt(localStorage.getItem("calGoal"));
 
 //Display step goals w/ progress in stepGoal box
-document.getElementById("stepGoalBox").innerHTML = "<h1 class='na-text'>" + stepGoalValue + " Steps" + "</h1>";
   function updateStepGoalBox() {
     if (!isNaN(stepGoalValue)) {
       var progressPercentage = (stepCount / stepGoalValue) * 100; // Basic Percentage Formual
@@ -261,11 +260,17 @@ document.getElementById("stepGoalBox").innerHTML = "<h1 class='na-text'>" + step
         </div>
     `;
       }
-    }
+      else {
+    document.getElementById("stepGoalBox").innerHTML = "<h1 class='na-text'>" + stepGoalValue + " Steps" + "</h1>";
+} 
+}
 //Display calorie values in my goal box
     if (!isNaN(stepGoalValue)) {
         document.getElementById("calGoalBox").innerHTML = "<h1 class='na2-text'>" + calGoalValue + " Cals" + "</h1>";
     }
+
+            document.getElementById("stepGoalBox").innerHTML = `<h1 class='na-text'>${stepGoalValue} Steps</h1>`;
+
 
 
 
