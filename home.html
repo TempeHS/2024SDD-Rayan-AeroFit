@@ -195,7 +195,7 @@ function updateStepCount() {
     document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
 function updateCalCount() {
-document.getElementById('calBox').innerText = calCount + " cals"; // Displays calCount in cals box
+  document.getElementById('calBox').innerHTML = '<h1 class="na-text">' + calCount + " cals" + '</h1>' // Displays calCount in cals box
 }
 
 function startStepTracking() {
