@@ -22,5 +22,6 @@ Product Deliverables
 20. ~~Add local storage system for Motion Permissions~~
 21. Add animation for reaching stepGoal
 22. Add option for users to add their weight, for more accurate calorie conversions. 
+23. Add a help page with user documentation
 
 
