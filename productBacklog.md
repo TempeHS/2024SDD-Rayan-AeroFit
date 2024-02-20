@@ -10,7 +10,7 @@ Product Deliverables
 8. Create a Logbook Page where users can view and input their daily notes. 
 9. Add a Date System for the fitness diary entries, printing the current date of each entry.
 10. Use Accelerometer API to sensibly track steps.
-11. Add a live goal progress bar that is synchronised with stepCount
+11. ~~Add a live goal progress bar that is synchronised with stepCount~~
 12. Make it so that the Goal Setup page only opens for new users.
 13. Add Historical Step Data to the personal records 
 14. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
@@ -23,5 +23,7 @@ Product Deliverables
 21. Add animation for reaching stepGoal
 22. Add option for users to add their weight, for more accurate calorie conversions. 
 23. Add a help page with user documentation
+24. Add a live goal progress bar that is synchronised with calCount
+25. Make navigation system fixed in place 
 
 
