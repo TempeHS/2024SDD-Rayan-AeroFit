@@ -1,7 +1,7 @@
 # Agile Artifacts
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-1. Add local storage system for stepCount and calCount
-2. Error messages force user to retry input until no error is detected. 
+1. ~~Add local storage system for stepCount and calCount~~
+2. ~~Error messages force user to retry input until no error is detected.~~ 
 3. ~~Add a help page with user documentation~~
 4. Add a live goal progress bar that is synchronised with calCount
 

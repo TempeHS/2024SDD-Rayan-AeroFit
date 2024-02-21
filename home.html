@@ -237,11 +237,18 @@ function startStepTracking() {
                 updateStepGoalBox();
                 calConversion();
                 updateCalCount();
+                saveProgress ();
                 lastUpdate = currentTime;
             }
         }
     });
 }
+
+function saveProgress () {
+localStorage.setItem('stepCount', stepCount);
+localStorage.setItem('calCount', calCount);
+}
+
 
 function hideMotionRequest() {
   document.getElementById('permissionButton').style.display = 'none';
