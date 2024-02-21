@@ -9,6 +9,12 @@ function submitValues() {
         alert("No Empty Spaces. Only Type In Numbers");
         return;
     }
+    else {
+        window.location.href = "home.html"; 
+    }
+
+
+
    // Stores the users steps anf cals and then redirects it to home.html
     localStorage.setItem("stepGoal", stepGoalValue);
     localStorage.setItem("calGoal", calGoalValue);
