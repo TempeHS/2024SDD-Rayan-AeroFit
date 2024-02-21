@@ -316,6 +316,7 @@ function requestMotionPermissions() {
 
   
 //Step to Calorie conversions (ratio of cals:steps = 5:100) 
+
 stepCountOld = parseInt(localStorage.getItem('stepCountOld')) || 0;
 function calConversion() {
 // For every 20 steps, calCount++
@@ -323,6 +324,7 @@ function calConversion() {
       stepCountOld = stepCount
       calCount++
       localStorage.setItem('calCount', calCount);
+      localStorage.setItem('stepCountOld', stepCountOld);
       }
 
 
