@@ -17,13 +17,13 @@ Product Deliverables
 15. ~~Error Messages (Feedback to User)~~
 16.~~ Add local storage system for goals~~
 17. ~~Use a basic calorie to step ratio to estimate cals burnt.~~
-18. Error messages force you to retry input until no error is detected. 
-19. Add local storage system for stepCount and calCount
+18. ~~Error messages force you to retry input until no error is detected.~~
+19. ~~Add local storage system for stepCount and calCount~~
 20. ~~Add local storage system for Motion Permissions~~
 21. Add animation for reaching stepGoal
 22. Add option for users to add their weight, for more accurate calorie conversions. 
-23. Add a help page with user documentation
+23. ~~Add a help page with user documentation~~
 24. Add a live goal progress bar that is synchronised with calCount
-25. Make navigation system fixed in place 
+25. Make navigation system fixed in place.
 
 
