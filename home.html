@@ -233,10 +233,12 @@ function startStepTracking() {
             var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
             if (totalAccel > accelLimit) { 
                 stepCount++;
+                localStorage.setItem('stepCount', stepCount);
                 updateStepCount(); // Updates step count display
                 updateStepGoalBox();
                 calConversion();
                 updateCalCount()
+              
                 lastUpdate = currentTime;
             }
         }
@@ -310,6 +312,7 @@ function calConversion() {
       if (stepCount - stepCountOld == 20) {
       stepCountOld = stepCount
       calCount++
+      localStorage.setItem('calCount', calCount);
       }
 
 
