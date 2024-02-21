@@ -25,5 +25,9 @@ Product Deliverables
 23. ~~Add a help page with user documentation~~
 24. Add a live goal progress bar that is synchronised with calCount
 25. Make navigation system fixed in place.
+26. Add a challenge mode where users can try complete randomly generated challenges.
+27. Add a race mode where the user can race an AI player.
+28. Add a settings page where the user can edit goals, display mode (dark/light), and change units of measurement.
+
 
 
