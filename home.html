@@ -63,19 +63,22 @@
   position: fixed;
         top: 10px;
         left: 10px;
-        width: 50px;
-        height: 50px;
-        background-color: black;
+        width: 45px;
+        height: 45px;
+        background-color: rgb(75, 34, 210);
         color: white;
         border: none;
         justify-content: center;
         text-align: center;
         border-radius: 5px;
+
 }
 
 #user-doc-button img {
         width: 25px; 
         height: 25px; 
+        margin-top: 10px;
+        margin-left: -2px;
     }
 
 @media (max-width: 768px) {
@@ -127,14 +130,14 @@
     </style>
 </head>
   <body>
-    
     <div class="container text-center">
         <div class="row">
           <div class="col-sm-12 col-md-4 col-lg-3">
             <img src="images/AeroFit Logo.png" class="img-fluid">
           </div>
-          <button href="userDocumentation.html" id="user-doc-button">
+          <a href="help.html" id="user-doc-button" class ="button">
             <img src="images/helpicon.png">
+            </a>
           </button>
           <div class="col-sm-12 col-md-12 col-lg-12">
             <h1 class="stepheading">Steps Taken</h1>
