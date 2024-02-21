@@ -191,6 +191,9 @@
 window.onload = updateStepGoalBox();
 updateCalCount();
 
+var stepCount = parseInt(localStorage.getItem("stepCount"));
+var calCount = parseInt(localStorage.getItem("stepCount"));
+
 // Step detection settings
 var accelLimit = 12; // Adjusted for better accuracy
 var lastUpdate = 0;
@@ -221,7 +224,7 @@ function updateStepCount() {
     document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
 else {
-    document.querySelector('.na-box .na-text').innerText = 0 + " Steps"; 
+    document.querySelector('.na-box .na-text').innerText = 0 + " Steps";
 
 }
 }
