@@ -69,8 +69,6 @@
         <div id="challengeActiveBox" class="text-center" style="display: none;">
           <h2 id="stepsRemaining"></h2> <!-- Displays steps remaining -->
           <p id="timer"></p> <!-- Displays the timer -->
-          <button onclick="startChallengeStepTracking()">Start Tracking</button>
-
       </div>
 
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
@@ -145,6 +143,7 @@ function startChallengeStepTracking() {
 }
 
 function startChallenge() {
+    startChallengeStepTracking();
     var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
     var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
