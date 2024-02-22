@@ -153,7 +153,26 @@ function startChallenge() {
     startTimer(challengeTime);
 }
 
-function startTimer() {
-  //Fill with timer code. 
+  function startTimer(duration) {
+    var timer = duration;
+    var countdown = setInterval(function () {
+        //Update timer display with remaining seconds
+        document.getElementById('timer').textContent = timer + " seconds remaining";
+
+        //Decrement the timer
+        timer--;
+
+        //Check if times up
+        if (timer < 0) {
+            clearInterval(countdown); // Stop the countdown
+            if (challengeStepCount > 0) {
+                alert('Time’s up! Try again.');
+                document.getElementById('challengeActiveBox').style.display = 'none'; //Closes the box 
+            } else {
+                alert('Challenge complete! Well done!');
+            }
+        }
+    }, 1000); //Update timer every second (this is in ms)
 }
+
   </script>
