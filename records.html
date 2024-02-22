@@ -90,24 +90,26 @@
   
     // Generates Random Easy Challenge
     function makeEasyChallenge() {
-    const challengeStep = Math.floor(Math.random() * (101 - 80) + 80); // Random step count from 80 to 100
-    const challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 80 to 100 seconds
+    var challengeStep = Math.floor(Math.random() * (101 - 80) + 80); // Random step count from 80 to 100
+    var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 80 to 100 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
   }
   
   
   function makeMediumChallenge() {
-    const challengeStep = Math.floor(Math.random() * (151 - 120) + 120); // Random step count from 120 to 150
-    const challengeTime = Math.floor(Math.random() * (121 - 90) + 90); // Random time from 90 to 120 seconds
+    var challengeStep = Math.floor(Math.random() * (151 - 120) + 120); // Random step count from 120 to 150
+    var challengeTime = Math.floor(Math.random() * (121 - 90) + 90); // Random time from 90 to 120 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
   } 
   
   
   function makeHardChallenge() {
-    alert('Hard challenge selected');
-  }
+    var challengeTime = Math.floor(Math.random() * (141 - 110) + 110); // Random time from 110 to 140 seconds
+    document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
+    document.getElementById('challengeBox').style.display = 'block';
+}  
 
    
   </script>
