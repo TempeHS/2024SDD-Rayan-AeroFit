@@ -52,7 +52,8 @@
         
         <button class="button" onclick="makeEasyChallenge()">Easy</button>
         <button class="button" onclick="makeMediumChallenge()">Medium</button>
-        <button class="button" onclick="makeHardChallenge()">Hard</button>        
+        <button class="button" onclick="makeHardChallenge()">Hard</button>  
+        
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
     <div class="col-sm-1 col-2">
         <a href="home.html" class="btn btn-dark">
@@ -80,3 +81,16 @@
   <script>//Get values from local storage
     var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
     var calGoalValue = parseInt(localStorage.getItem("calGoal"));
+    
+    function makeEasyChallenge() {
+    alert('Easy challenge selected');
+  }
+  
+  function makeMediumChallenge() {
+    alert('Medium challenge selected');
+  } 
+  
+  function makeHardChallenge() {
+    alert('Hard challenge selected');
+  }
+  </script>

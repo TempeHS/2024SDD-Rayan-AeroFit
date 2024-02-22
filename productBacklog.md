@@ -28,6 +28,8 @@ Product Deliverables
 26. Add a challenge mode where users can try complete randomly generated challenges.
 27. Add a race mode where the user can race an AI player.
 28. Add a settings page where the user can edit goals, display mode (dark/light), and change units of measurement.
+29. - Make Step Tracking Active throughout all pages 
+
 
 
 
