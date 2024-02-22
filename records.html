@@ -106,6 +106,7 @@
   
   
   function makeHardChallenge() {
+    var challengeStep = Math.floor(Math.random() * (201 - 170) + 170); // Random step count from 170 to 200
     var challengeTime = Math.floor(Math.random() * (141 - 110) + 110); // Random time from 110 to 140 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
