@@ -38,3 +38,37 @@ function requestMotionPermissions() {
       startStepTracking();
   }
 }
+
+
+
+//Global functions
+function startStepTracking() {
+    window.addEventListener('devicemotion', (event) => { //
+        var currentTime = new Date().getTime(); // Current time in ms 
+        // Checks 3D Acceleration data
+        if (currentTime - lastUpdate > minTimeBetweenSteps) { // Ensures Step Delay is Met
+            var accel = event.accelerationIncludingGravity; // XYZ Acceleration measured
+            var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
+            if (totalAccel > accelLimit) { 
+                stepCount++;
+                localStorage.setItem('stepCount', stepCount);
+                updateStepCount(); // Updates step count display
+                updateStepGoalBox();
+                calConversion();
+                updateCalCount()
+              
+                lastUpdate = currentTime;
+            }
+        }
+    });
+}
+function calConversion() {
+    // For every 20 steps, calCount++
+          if (stepCount - stepCountOld == 20) {
+          stepCountOld = stepCount
+          calCount++
+          localStorage.setItem('calCount', calCount);
+          localStorage.setItem('stepCountOld', stepCountOld);
+          }
+        }    
+

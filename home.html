@@ -197,7 +197,6 @@
   updateCalCount(); // Update the displayed calorie count
   updateStepGoalBox(); 
   checkPermissions(); // Checks User Permissions
-
   startStepTracking();
 });
  
@@ -212,9 +211,14 @@ function checkPermissions() {
 var permissionGranted = localStorage.getItem('motionPermissionsGranted');
   if (window.innerWidth <= 900 && permissionGranted !== 'true') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
+  }
+    else {
+      alert("This app does not work on Desktop. Try launching it on a mobile device")
+
+    }
 
 }
-}
+
 
 
 document.getElementById('permissionButton').addEventListener('click', function() {
@@ -326,7 +330,7 @@ function calConversion() {
       localStorage.setItem('calCount', calCount);
       localStorage.setItem('stepCountOld', stepCountOld);
       }
-      
+
     }
 
 
