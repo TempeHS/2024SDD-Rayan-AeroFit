@@ -66,6 +66,12 @@
             <p id="challengeText"></p> 
             <button onclick="startChallenge()">Accept Challenge</button>
         </div>
+        <div id="challengeActiveBox" class="text-center" style="display: none;">
+          <h2 id="stepsRemaining"></h2> <!-- Displays steps remaining -->
+          <p id="timer"></p> <!-- Displays the timer -->
+          <button onclick="startChallengeStepTracking()">Start Tracking</button>
+
+      </div>
 
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
     <div class="col-sm-1 col-2">
@@ -87,8 +93,8 @@
   <script src="script.js"></script>
   <script>//Get values from local storage
    var challengeStepCount = 0
-   
-   
+
+
    
    var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
     var calGoalValue = parseInt(localStorage.getItem("calGoal"));
@@ -99,6 +105,8 @@
     var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 80 to 100 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
+    localStorage.setItem('challengeStep', challengeStep);
+    localStorage.setItem('challengeTime', challengeTime);
   }
   
   
@@ -126,11 +134,26 @@ function startChallengeStepTracking() {
             var accel = event.accelerationIncludingGravity; // XYZ Acceleration measured
             var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
             if (totalAccel > accelLimit) { 
-                challengeStepCount++;
-                localStorage.setItem('challengeStepCount', challengeStepCount);         
+                challengeStepCount--;
+                if (challengeStepCount <= 0) {
+                    alert('Challenge complete!');
+                }
                 lastUpdate = currentTime;
             }
         }
     });
+}
+
+function startChallenge() {
+    var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
+    var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
+    document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
+    document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
+    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
+    startTimer(challengeTime);
+}
+
+function startTimer() {
+  //Fill with timer code. 
 }
   </script>
