@@ -99,8 +99,10 @@
   
     // Generates Random Easy Challenge
     function makeEasyChallenge() {
+    document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
     var challengeStep = Math.floor(Math.random() * (101 - 80) + 80); // Random step count from 80 to 100
     var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 80 to 100 seconds
+    document.getElementById('challengeActiveBox').style.display = 'none';
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
     localStorage.setItem('challengeStep', challengeStep);
@@ -109,18 +111,24 @@
   
   
   function makeMediumChallenge() {
+    document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
     var challengeStep = Math.floor(Math.random() * (151 - 120) + 120); // Random step count from 120 to 150
     var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 90 to 120 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
+    localStorage.setItem('challengeStep', challengeStep);
+    localStorage.setItem('challengeTime', challengeTime);
   } 
   
   
   function makeHardChallenge() {
+    document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
     var challengeStep = Math.floor(Math.random() * (201 - 170) + 170); // Random step count from 170 to 200
-    var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 110 to 140 seconds
+    var challengeTime = Math.floor(Math.random() * (11 - 1) + 1); // Random time from 110 to 140 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
+    localStorage.setItem('challengeStep', challengeStep);
+    localStorage.setItem('challengeTime', challengeTime);
 }  
 
    
@@ -141,7 +149,6 @@ function startChallengeStepTracking() {
         }
     });
 }
-
 function startChallenge() {
     startChallengeStepTracking();
     var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
@@ -149,21 +156,26 @@ function startChallenge() {
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
     document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
+    document.getElementById('timer').textContent = challengeTime + " seconds remaining";
     startTimer(challengeTime);
 }
+var timerIntervalID = null;
 
   function startTimer(duration) {
+    if (timerIntervalID !== null) {
+        clearInterval(timerIntervalID);
+    }
     var timer = duration;
-    var countdown = setInterval(function () {
-        //Update timer display with remaining seconds
-        document.getElementById('timer').textContent = timer + " seconds remaining";
-
-        //Decrement the timer
+    var timer = duration;
+    timerIntervalID = setInterval(function () {
         timer--;
-
+        document.getElementById('timer').textContent = timer + " seconds remaining";
+    
         //Check if times up
-        if (timer < 0) {
-            clearInterval(countdown); // Stop the countdown
+        
+        if (timer <= 0) {
+            var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
+            clearInterval(timerIntervalID);
             if (challengeStepCount > 0) {
                 alert('Time’s up! Try again.');
                 document.getElementById('challengeActiveBox').style.display = 'none'; //Closes the box 
