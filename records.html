@@ -163,7 +163,7 @@ function startChallenge() {
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
     document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
-    document.getElementById('timer').textContent = challengeTime + " seconds remaining";
+    document.getElementById('timer').textContent = challengeTime + " seconds left";
     startTimer(challengeTime);
 }
 var timerIntervalID = null;
@@ -176,7 +176,7 @@ var timerIntervalID = null;
     var timer = duration;
     timerIntervalID = setInterval(function () {
         timer--;
-        document.getElementById('timer').textContent = timer + " seconds remaining";
+        document.getElementById('timer').textContent = timer + " seconds left";
     
         //Check if times up
         
