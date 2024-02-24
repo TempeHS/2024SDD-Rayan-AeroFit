@@ -163,6 +163,7 @@ function startChallengeStepTracking() {
             var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
             if (totalAccel > accelLimit) { 
                 challengeStepCount--;
+                var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
                 if (challengeStepCount <= 0) {
                     alert('Challenge complete!');
                 }
