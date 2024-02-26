@@ -164,8 +164,9 @@ function startChallengeStepTracking() {
             var accel = event.accelerationIncludingGravity; // XYZ Acceleration measured
             var totalAccel = Math.sqrt(accel.x * accel.x + accel.y * accel.y + accel.z * accel.z); // Uses Vector Magnitude Formula for Magnitude of Acceleration
             if (totalAccel > accelLimit) { 
-                var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
-                challengeStepCount--;
+                challengeStepCount = parseInt(localStorage.getItem('challengeStep'), 10) - 1;
+                localStorage.setItem('challengeStep', challengeStepCount); // Update the step count in localStorage
+                document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`; // Update the display
                 if (challengeStepCount <= 0) {
                     alert('Challenge complete!');
                 }
