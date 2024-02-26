@@ -164,6 +164,7 @@ function startChallengeStepTracking() {
             if (totalAccel > accelLimit) { 
                 challengeStepCount--;
                 var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
+                document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
                 if (challengeStepCount <= 0) {
                     alert('Challenge complete!');
                 }
@@ -178,7 +179,6 @@ function startChallenge() {
     var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
-    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
     document.getElementById('timer').textContent = challengeTime + " seconds left";
     startTimer(challengeTime);
 }
