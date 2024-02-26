@@ -153,7 +153,9 @@
     localStorage.setItem('challengeTime', challengeTime);
 }  
 
-   
+    var accelLimit = 12; // Adjusted for better accuracy
+    var lastUpdate = 0;
+    var minTimeBetweenSteps = 200; // Minimum delay between steps in ms   
 function startChallengeStepTracking() {
     window.addEventListener('devicemotion', (event) => { //
         var currentTime = new Date().getTime(); // Current time in ms 
@@ -164,7 +166,6 @@ function startChallengeStepTracking() {
             if (totalAccel > accelLimit) { 
                 challengeStepCount--;
                 var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
-                document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
                 if (challengeStepCount <= 0) {
                     alert('Challenge complete!');
                 }
@@ -179,6 +180,7 @@ function startChallenge() {
     var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
+    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
     document.getElementById('timer').textContent = challengeTime + " seconds left";
     startTimer(challengeTime);
 }
@@ -189,10 +191,6 @@ var timerIntervalID = null;
         clearInterval(timerIntervalID);
     }
     
-    var accelLimit = 12; // Adjusted for better accuracy
-    var lastUpdate = 0;
-    var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
-
     var timer = duration;
     var timer = duration;
     timerIntervalID = setInterval(function () {
