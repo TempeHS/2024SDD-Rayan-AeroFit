@@ -188,6 +188,11 @@ var timerIntervalID = null;
     if (timerIntervalID !== null) {
         clearInterval(timerIntervalID);
     }
+    
+    var accelLimit = 12; // Adjusted for better accuracy
+    var lastUpdate = 0;
+    var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
+
     var timer = duration;
     var timer = duration;
     timerIntervalID = setInterval(function () {
