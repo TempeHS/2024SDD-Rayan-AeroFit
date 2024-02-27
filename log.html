@@ -141,8 +141,12 @@
     // Creating a new result box for each submission
     var resultBox = document.createElement('div');
     resultBox.className = 'result-box';
+  // Getting current date
+    var today = new Date(); // Gets exact date
+    var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); // Gets date in a day/month/year format
 
     resultBox.innerHTML = `
+        <p><label>Date:</label> ${date}</p>
         <p><label>Exercise:</label> <span>${exerciseType}</span></p>
         <p><label>Progress:</label> <span>${progressValue} ${progressType}</span></p>
         <p><label>Notes:</label> <span>${additionalNotes}</span></p>`;
