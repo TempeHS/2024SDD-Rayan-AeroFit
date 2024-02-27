@@ -32,3 +32,4 @@ Product Deliverables
 31. ~~Add user documentation to index.html~~
 32. Add a leaderboard with fake people for Challenges page
 33. Save entries to local storage
+34. Fix index.html gif bug on desktop view
