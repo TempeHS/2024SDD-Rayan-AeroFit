@@ -20,7 +20,7 @@
     display: flex;
     align-items: center;
     background: #ffffff;
-    flex-direction: column;      
+    flex-direction: column;   
         }
 
   .result-box {
@@ -104,6 +104,8 @@
       </form>
       <div id="resultBox" class="result-box"></div>
   </div>
+  <div id="resultsContainer"></div>
+</div>
   
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
     <div class="col-sm-1 col-2">
@@ -136,10 +138,16 @@
     var progressType = form.progressType.value;
     var progressValue = form.progressValue.value;
     var additionalNotes = form.additionalNotes.value;
+    // Creating a new result box for each submission
+    var resultBox = document.createElement('div');
+    resultBox.className = 'result-box';
+
     resultBox.innerHTML = `
         <p><label>Exercise:</label> <span>${exerciseType}</span></p>
         <p><label>Progress:</label> <span>${progressValue} ${progressType}</span></p>
         <p><label>Notes:</label> <span>${additionalNotes}</span></p>`;
-    resultBox.style.display = 'block';
+        var resultsContainer = document.getElementById('resultsContainer');
+        resultsContainer.prepend(resultBox);
     }
+    
     </script>
