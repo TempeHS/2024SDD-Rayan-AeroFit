@@ -30,7 +30,7 @@ Product Deliverables
 28. Add a settings page where the user can edit goals, display mode (dark/light), and change units of measurement.
 29. Make Step Tracking active throughout all pages 
 30. Make it so that User can edit one goal, and the other will stay the same.
-31. 
+31. ~~Add user documentation to index.html~~
 
 
 
