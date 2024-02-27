@@ -7,11 +7,10 @@ Product Deliverables
 5. ~~Create and attach relevant and simplistic icons for each element on the navigation system~~
 6. ~~Create a Goals page which displays current goals and allows users to update them~~
 7. Create a Personal Records page which displays all-time steps taken/calories burnt, along with most calories burnt/steps taken in a 24Hour period
-8. Create a Logbook Page where users can view and input their daily notes. 
-9. Add a Date System for the fitness diary entries, printing the current date of each entry.
+8. Create a Logbook Page where users can view and input their daily notes and goals. 
+9. Add a Date System for the logbook entries, printing the current date on each entry.
 10. ~~Use Accelerometer API to sensibly track steps.~~
 11. ~~Add a live goal progress bar that is synchronised with stepCount~~
-12. Make it so that the Goal Setup page only opens for new users.
 13. Add Historical Step Data to the personal records 
 14. Copy essential PWA file structure from 2024SDD-HSC-MAJORPROJECT
 15. ~~Error Messages (Feedback to User)~~
@@ -25,12 +24,11 @@ Product Deliverables
 23. ~~Add a help page with user documentation~~
 24. Add a live goal progress bar that is synchronised with calCount
 25. Make navigation system fixed in place.
-26. Add a challenge mode where users can try complete randomly generated challenges.
+26. ~~Add a challenge mode where users can try complete randomly generated challenges.~~
 27. Add a race mode where the user can race an AI player.
 28. Add a settings page where the user can edit goals, display mode (dark/light), and change units of measurement.
-29. Make Step Tracking active throughout all pages 
+29. ~~Make Step Tracking active throughout all pages~~
 30. Make it so that User can edit one goal, and the other will stay the same.
 31. ~~Add user documentation to index.html~~
-
-
+32. Add a leaderboard with fake people for Challenges page
 

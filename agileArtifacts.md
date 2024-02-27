@@ -9,6 +9,5 @@ A fully functioning logbook page where users can track their workouts. It should
 ## Sprint Review (Focus on project management)
 
 ### What challenges did you have?
-Implementing the timer took a considerable amount of project time. I ran into multiple errors from the timer not working at all, to multiple timers running at once. This made this sprint unnecessarily long, in the future I will seek assistance from my peers, as they had already successfully implemented timers into their own apps.
 ### What did you do well?
-I was able to incorporate gifs into my user documentation, enhancing the amount of information I'm able to convey to the user by showing them a live tutorial of what to do.
+ 
