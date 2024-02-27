@@ -1,10 +1,11 @@
 # Agile Artifacts
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
-- ~~Add a challenge mode where users can try complete randomly generated challenges.~~
-- ~~Make Step Tracking Active throughout all pages~~ (Made it active in neccessary pages_
-- ~~Add user documentation to index.html~~ (Added as it was an important change)
+1. Create a Logbook Page where users can view and input their daily notes and goals. 
+2. Add a Date System for the logbook entries, printing the current date on each entry.
+3. Allow user to delete and edit entries.
 ## Increment (what must be achieved by the end of the sprint)
-A challenge mode that allows users to generate timed challenges that vary based on difficulty.
+A fully functioning logbook page where users can track their workouts. It should be structured instead of just freehand note writing.
+
 ## Sprint Review (Focus on project management)
 
 ### What challenges did you have?
