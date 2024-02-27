@@ -161,12 +161,23 @@ input, textarea {
   // Getting current date
     var today = new Date(); // Gets exact date
     var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); // Gets date in a day/month/year format
+  
+    // Create the close button
+    var closeButton = document.createElement('div');
+    closeButton.className = 'close-btn';
+    closeButton.innerHTML = 'x';
+   
+    // Button closes on click
+    closeButton.onclick = function() {
+        resultBox.remove(); // Removes result box
+    };
 
     resultBox.innerHTML = `
         <p><label>Date:</label> ${date}</p>
         <p><label>Exercise:</label> <span>${exerciseType}</span></p>
         <p><label>Progress:</label> <span>${progressValue} ${progressType}</span></p>
         <p><label>Notes:</label> <span>${additionalNotes}</span></p>`;
+        resultBox.appendChild(closeButton);
         var resultsContainer = document.getElementById('resultsContainer');
         resultsContainer.prepend(resultBox);
     }
