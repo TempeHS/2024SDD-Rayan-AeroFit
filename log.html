@@ -33,6 +33,7 @@
     .icon {
     width: 30px
     }
+    
    </style>
 
 </head>
@@ -119,4 +120,10 @@
     var progressType = form.progressType.value;
     var progressValue = form.progressValue.value;
     var additionalNotes = form.additionalNotes.value;
+    resultBox.innerHTML = `
+        <p><label>Exercise:</label> <span>${exerciseType}</span></p>
+        <p><label>Progress:</label> <span>${progressValue} ${progressType}</span></p>
+        <p><label>Notes:</label> <span>${additionalNotes}</span></p>`;
+    resultBox.style.display = 'block';
     }
+    </script>
