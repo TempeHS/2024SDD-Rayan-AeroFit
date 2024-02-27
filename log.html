@@ -61,7 +61,6 @@ input, textarea {
         }
         
         select {
-    border: none;
     background-color: #ffffff;
 }
 
@@ -102,7 +101,7 @@ input, textarea {
                   <legend>Exercise Details</legend>
   
                   <p>
-                      <label>Exercise
+                      <label>Exercise Type
                           <br />
                           <select name="exerciseType">
                               <option>Run</option>
@@ -113,19 +112,19 @@ input, textarea {
                   </p>
   
                   <p>
-                      <label>Progress Type
+                      <label>Distance Travelled
                           <br />
                           <select name="progressType">
                               <option>Kilometres</option>
                               <option>Steps</option>
                           </select>
                       </label>
-                      <input name="progressValue" />
+                      <input name="progressValue"  placeholder="Enter how far you travelled"  />
                   </p>
                 <p>
                   <label>Additional Notes
                       <br />
-                      <textarea name="additionalNotes" cols="30" rows="3"></textarea>
+                      <textarea name="additionalNotes" cols="30" rows="3" placeholder="Add any additional notes"></textarea>
                   </label>
               </p>
 
