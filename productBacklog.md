@@ -31,4 +31,4 @@ Product Deliverables
 30. Make it so that User can edit one goal, and the other will stay the same.
 31. ~~Add user documentation to index.html~~
 32. Add a leaderboard with fake people for Challenges page
-
+33. Save entries to local storage
