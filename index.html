@@ -48,8 +48,47 @@
     .btn-btn-secondary{
       margin-top: -100px;
     }
-    
+
+  #popupContent {
+    width: 30%; 
+    margin: auto;
+    margin-top: 5%; 
+  }
+  #popupOverlay {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+  }
+
+    /* Mobile Optimised View */
+    @media (max-width: 768px) {
+    #popupContent {
+  background-color: white;
+  margin: auto;
+  margin-top: 200px;
+  padding: 20px;
+  border: 1px solid #132575;
+  width: 50%; 
+  border-radius: 10px; 
+  position: relative;
+    } 
+    #popupOverlay {
+  position: fixed; 
+  width: 100%; 
+  justify-content: center; 
+}
+    #closePopup {
+  text-align: center; 
+  width:100%;
+}
+    }
   
+
 
    </style>
 </head>
@@ -58,6 +97,12 @@
         <div class="row">
           <div class="col-sm-12 col-md-4 col-lg-3">
             <img src="images/AeroFit Logo.png" class="img-fluid">
+          </div>
+          <div id="popupOverlay" style="display:none;">
+            <div id="popupContent">
+              <img src="images/indexUserDoc.gif" class="img-fluid">
+              <button id="closePopup" class="btn btn-secondary">Close</button>
+            </div>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
             <h1 class="goalheading">Set your daily goals</h1>
@@ -108,6 +153,14 @@
     }
 
   }
+  function toggleUserDoc() {
+  var popupOverlay = document.getElementById("popupOverlay");
+  popupOverlay.style.display = "block";
+}
+
+  document.getElementById("closePopup").onclick = function() {
+  document.getElementById("popupOverlay").style.display = "none";
+}
   </script>
 </body>
 </html>

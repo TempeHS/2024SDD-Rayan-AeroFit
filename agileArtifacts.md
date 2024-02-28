@@ -2,7 +2,7 @@
 ## Sprint backlog list of achievables (annotate changes made during sprint, including data required)
 1.  ~~Replace current userdoc images with tutorial gifs.~~
 2.  Make the index.html tutorial gif a popup
-3.  Replace current navigation icons with bootstrap icons
+3.  ~~(Replace current navigation icons with bootstrap icons)~~ Couldn't implement. Tons of errors caused after pasting code.
 4.  ~~Replace NaN goals with "0" steps~~
 5.  Add user documentation for log.html
 6.  ~~Add desktop incompatibility warning~~
