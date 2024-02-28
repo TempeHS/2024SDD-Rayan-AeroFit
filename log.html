@@ -92,7 +92,17 @@ input, textarea {
     padding: 8px; 
     border-radius: 4px;
 }
-    
+.heading {
+  text-align: center;
+  width: 100%;
+  justify-content: center;
+}
+fieldset {
+    border: 3px solid #132575;
+    padding: 20px;
+    border-radius: 8px;
+    width:100%;
+}    
    </style>
 
 </head>
@@ -107,10 +117,10 @@ input, textarea {
     </div>
     <body>
       <div class="main">
-          <h1>My Logbook</h1>
+          <h1 class="heading">My Logbook</h1>
           <form id="exerciseForm">
               <fieldset>
-                  <legend>Exercise Details</legend>
+                  <legend class="heading">Exercise Details</legend>
                   <p>
                       <label>Exercise Type
                           <br />
@@ -179,6 +189,13 @@ input, textarea {
     var progressType = form.progressType.value;
     var progressValue = form.progressValue.value;
     var additionalNotes = form.additionalNotes.value;
+    
+    //Ensures numbers are typed for Distance Travelled 
+    if (!progressValue || isNaN(progressValue)) {
+        alert('Please enter a valid numerical value for Distance Travelled.');
+        return;
+    }
+    
     // Creating a new result box for each submission
     var resultBox = document.createElement('div');
     resultBox.className = 'result-box';
