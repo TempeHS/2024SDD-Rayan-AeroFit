@@ -102,6 +102,8 @@ fieldset {
     padding: 20px;
     border-radius: 8px;
     width:100%;
+    scale: 85%;
+    margin-top: -30px;
 }    
    </style>
 
@@ -157,7 +159,6 @@ fieldset {
   </div>
   <div id="resultsContainer"></div>
 </div>
-  
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
     <div class="col-sm-1 col-2">
         <a href="home.html" class="btn btn-dark">
@@ -192,7 +193,7 @@ fieldset {
     
     //Ensures numbers are typed for Distance Travelled 
     if (!progressValue || isNaN(progressValue)) {
-        alert('Please enter a valid numerical value for Distance Travelled.');
+        alert('Please enter a numerical value for Distance Travelled.');
         return;
     }
     
