@@ -3,7 +3,7 @@
 1.  ~~Replace current userdoc images with tutorial gifs.~~
 2.  Make the index.html tutorial gif a popup
 3.  Replace current navigation icons with bootstrap icons
-4.  Replace NaN goals with "0" steps
+4.  ~~Replace NaN goals with "0" steps~~
 5.  Add user documentation for log.html
 6.  ~~Add desktop incompatibility warning~~
 7.  Add popup on first launch that explains navigation system
