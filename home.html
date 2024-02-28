@@ -221,9 +221,14 @@ var permissionGranted = localStorage.getItem('motionPermissionsGranted');
 document.getElementById('permissionButton').addEventListener('click', function() {
         requestMotionPermissions();
 });
-
+    
 
 document.addEventListener('DOMContentLoaded', (event) => {
+  
+  
+  if (window.innerWidth > 1025) { // Limit for desktop screen
+        alert("Warning: App does not work on desktop. Please launch on mobile.");
+    }
   updateStepCount(); // Updates step count display when my page loads
   startStepTracking(); // Calls step tracking function
 });

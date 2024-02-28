@@ -5,7 +5,7 @@
 3.  Replace current navigation icons with bootstrap icons
 4.  Replace NaN goals with "0" steps
 5.  Add user documentation for log.html
-6.  Add desktop incompatibility warning
+6.  ~~Add desktop incompatibility warning~~
 7.  Add popup on first launch that explains navigation system
 
 ## Increment (what must be achieved by the end of the sprint)
