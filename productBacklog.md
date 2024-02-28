@@ -32,11 +32,12 @@ Product Deliverables
 31. ~~Add user documentation to index.html~~
 32. Add a leaderboard with fake people for Challenges page
 33. Save entries to local storage
-34. Fix index.html gif bug on desktop view
-35. Replace current userdoc images with tutorial gifs.
-36. Make the index.html tutorial gif a popup
-37. Replace current navigation icons with bootstrap icons
-38. Replace NaN goals with "0" steps
-39. Add user documentation for log.html
-40. Add desktop incompatibility warning
+34. ~~Fix index.html gif bug on desktop view~~
+35. ~~Replace current userdoc images with tutorial gifs.~~
+36. ~~Make the index.html tutorial gif a popup~~
+37. ~~Replace current navigation icons with bootstrap icons~~
+38. ~~Replace NaN goals with "0" steps~~
+39. ~~Add user documentation for log.html~~
+40. ~~Add desktop incompatibility warning~~
 41. Add challenge leaderboard and points system
+42. A page of content severed from a SQL backend
