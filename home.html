@@ -187,6 +187,7 @@
     <script src="script.js"></script>
 <script>
    
+  //Run on page load
   document.addEventListener('DOMContentLoaded', (event) => {
   // Load stored values or set to 0 none available
   stepCount = parseInt(localStorage.getItem('stepCount')) || 0;
@@ -195,24 +196,24 @@
   calGoalValue = parseInt(localStorage.getItem("calGoal")) || 0;
   updateStepCount(); // Update the displayed step count
   updateCalCount(); // Update the displayed calorie count
-  updateStepGoalBox(); 
+  updateStepGoalBox(); // Update the step goal box 
   checkPermissions(); // Checks User Permissions
-  startStepTracking();
+  startStepTracking(); // Begin step tracking
 });
  
-
-
 // Step detection settings
-var accelLimit = 12; // Adjusted for better accuracy
-var lastUpdate = 0;
+var accelLimit = 12; // Acceleration sensititivity (Adjusted for better accuracy)
+var lastUpdate = 0;  
 var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
 
+// Checks if user is on mobile and hasn't yet granted motion permissions
 function checkPermissions() {
 var permissionGranted = localStorage.getItem('motionPermissionsGranted');
   if (window.innerWidth <= 900 && permissionGranted !== 'true') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
   }
 }
+// Call requestMotionPermissions when permissionButon clicked
 document.getElementById('permissionButton').addEventListener('click', function() {
         requestMotionPermissions();
 });
@@ -229,6 +230,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   startStepTracking(); // Calls step tracking function
 });
 
+// Replaces displayed stepCount with current stepCount value
 function updateStepCount() { 
     document.querySelector('.stepAndCal-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
