@@ -3,7 +3,7 @@ AeroFit is a beginner-friendly and simplistic step-tracking app made to help beg
 
 ## Step Tracker 
 ### Core Features: 
-- The Step Tracker used accelerometer data and time between steps to track user steps accurately.
+- The Step Tracker uses accelerometer data and time between steps to accurately track user steps.
 - Step-Goal progress bar shows accurate progress towards goals
 - Calorie conversions use a standardised ratio of 1cal:20steps to track calories
 - Main page uses local storage to detect if motion-permissions have been activated. If not, it guides the user to do so, thus automating the setup process.
@@ -35,16 +35,75 @@ I had to overcome numerous roadblocks when trying to implement this code.
 
 
 #### Generated Entries:
-- **Entry Creation**: Each exercise log submission generates a new entry in the logbook with the corresponding information inside and formatted.
+- **Entry Creation**: Each log submission generates a new entry in the logbook with the corresponding information inside and formatted.
 - **Date Tagging**: Automatically tags each entry with the current date in a day-month-year format.
+- **Deletable Entries**: Entries can be easily removed from the logbook by clicking the 'x' button.
 
 ### Preview:
 
 <img src="https://i.ibb.co/G37TWZY/Screenshot-2024-02-29-at-8-18-09-pm.png" width="20%" height="10%">
 
+## Timed Challenge Mode
+- **Step Count Tracking**: Uses acceleremoter data to track the user's steps in real-time.
+- **Difficulty Levels**: Users can select challenges based on their difficulty
+- **Random Challenges**: Each difficulty level generates a randomised challenge, making each one a unique experience.
+- **Countdown Timer**: A timer counts down the remaining time for the challenge.
+
+### Preview:
+
+<img src="https://i.ibb.co/mtnLs3h/RPReplay-Final1709198872.gif" width="20%" height="10%">
 
 
-### Error Prevention:
+## User Documentation
+
+**I have enhanced User Documentation by using:**
+- A help page
+- Popups which guide user
+
+### Help Page Preview: 
+
+<img src="https://i.ibb.co/fNJJNXt/helppage.gif" width="20%" height="10%">
+
+### Popup Preview: 
+
+<img src="https://i.ibb.co/r4kcwLh/popup.gif" width="20%" height="10%">
+
+
+
+
+
+## Error Prevention
+
+I have ensured multiple errors are avoided. Here are a few examples:
+
+### Invalid Input Prevention:
+
+<img src="https://i.ibb.co/DD3RjcB/error1.gif" width="20%" height="10%">
+
+<img src="https://i.ibb.co/fMZWMSx/error2.gif" width="20%" height="10%">
+
+### NaN Error Prevention
+- If goal values are invalid, they are detected and defaulted to zero.
+```javascript
+stepCount = parseInt(localStorage.getItem('stepCount')) || 0;
+```
+
+
+
+
+
+
+### Progress Bar Overstretching Prevention:
+```javascript
+ if (progressPercentage > 100) {
+            progressPercentage = 100;}
+```
+
+
+# Developer Notes:
+This app was created for my Year 12 Software Design & Development Major Project.
+
+
 
 
 
