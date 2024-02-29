@@ -1,4 +1,17 @@
-**Documentation For Developers Wanting To Maintain This App**
+# Documentation For Developers Wanting To Maintain This App
+
+
+## In order to use this app
+**Hardware Requirements**
+- Apple iPhone 7 or Newer.
+
+**Sofware Requirements**
+- Safari Browser (iPhone)
+
+**Sofware Requirements**
+- Standard internet connection with WWW connectivity
+
+## Defining Functions 
 
 **index.html Functions:**
 
