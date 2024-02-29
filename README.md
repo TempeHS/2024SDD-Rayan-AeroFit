@@ -2,6 +2,7 @@
 AeroFit is a beginner-friendly and simplistic step-tracking app made to help beginners reach their fitness goals. The application comes with three prominent features, a step tracker, fitness logbook, and a timed challenge mode. 
 
 **Step Tracker**
+
 <img src="https://i.ibb.co/7zMDVN5/IMG-0801.jpg" width="20%" height="10%">
 
 
