@@ -90,8 +90,8 @@
             <button onclick="startChallenge()">Accept Challenge</button>
         </div>
         <div id="challengeActiveBox" class="text-center" style="display: none;">
-          <h2 id="stepsRemaining"></h2> <!-- Displays steps remaining -->
-          <p id="timer"></p> <!-- Displays the timer -->
+          <h2 id="stepsRemaining"></h2>
+          <p id="timer"></p>
       </div>
 
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
@@ -178,43 +178,42 @@ function startChallengeStepTracking() {
         }
     });
 }
+// Starts challenge by beginning step tracking also setting up active challenge display
 function startChallenge() {
     startChallengeStepTracking();
     var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
     var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
-    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
-    document.getElementById('timer').textContent = challengeTime + " seconds left";
-    startTimer(challengeTime);
+    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`; // Display number of steps remaining
+    document.getElementById('timer').textContent = challengeTime + " seconds left"; // Display number of seconds left
+    startTimer(challengeTime); // Start countdown timer
 }
     var timerIntervalID = null;
 
+// Start timer for the challenge duration
 function startTimer(duration) {
     if (timerIntervalID !== null) {
-        clearInterval(timerIntervalID);
+        clearInterval(timerIntervalID); // Clears existing timers to prevent conflict
     }
+    var timer = duration;
     
-    var timer = duration;
-    var timer = duration;
     timerIntervalID = setInterval(function () {
-        timer--;
-        document.getElementById('timer').textContent = timer + " seconds left";
+        timer--; // Decrements timer by 1 second
+        document.getElementById('timer').textContent = timer + " seconds left"; // Update display with new time
     
         //Check if times up
-        
         if (timer <= 0) {
             var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
-            clearInterval(timerIntervalID);
+            clearInterval(timerIntervalID); // Stops the timer
             if (challengeStepCount > 0) {
-                alert('Time’s up! Try again.');
+                alert('Time’s up! You failed. Try again.'); // Alert to user if challenge not complete
                 document.getElementById('challengeActiveBox').style.display = 'none'; //Closes the box 
             } else {
-                alert('Challenge complete! Well done!');
+                alert('Challenge complete! Well done!'); // Alert to user if challenge complete
             }
         }
     }, 1000); //Update timer every second (this is in ms)
 }
-
 
   </script>
