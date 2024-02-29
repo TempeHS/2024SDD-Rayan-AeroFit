@@ -7,104 +7,106 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
-.btn {margin-top:29px;
-    padding: 20px 20px;
-    position:relative; 
-    align-items: center;
-
-    }
+  
+    /*Navigation Button CSS*/   
+    .btn {
+      margin-top:29px;
+      padding: 20px 20px;
+      position:relative; 
+      align-items: center;}
+    /*Input Box CSS*/
     .input-box {margin-top: 0px;}
+    /*Heading CSS*/
     .stepheading {padding-top: 40px ;}
-    .img-fluid {padding-top: 15px;
-    width: 80%; }
-
+    /*AeroFit Logo CSS*/   
+    .img-fluid {
+      padding-top: 15px;
+      width: 80%;}
+    /*Close Button (x) CSS*/ 
     .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    background-color: darkred;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 25px;
-    }
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: darkred;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;}
+    
+    /*Submit Button (Dark) CSS*/ 
     .darkButton {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border:none;
-    border-radius: 7px;
-    scale:95%;
-    } 
-  body {
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    flex-direction: column;   
-        }
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border:none;
+      border-radius: 7px;
+      scale:95%;} 
+    
+    /*Entire Box CSS*/
+    .body {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      flex-direction: column;}
+    
+    /*Log Entries CSS*/
+    .result-box {
+      position: relative;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgb(246, 246, 246);
+      margin-top: 20px;
+      color: #333;  
+      max-width: 400px;}
+    
+    /*Dropdown Menu and Input Field Border CSS*/
+    input, textarea {
+      padding: 10px;
+      margin: 8px;
+      border-radius: 4px;
+      border: 2px solid #9a9a9c;}
+    /*Dropdown Menu CSS*/
+    select {
+      background-color: #ffffff;}
 
-  .result-box {
-    position: relative;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: rgb(246, 246, 246);
-    margin-top: 20px;
-    color: #333;  
-    max-width: 400px; 
-}
-input, textarea {
-            padding: 10px;
-            margin: 8px;
-            border-radius: 4px;
-            border: 2px solid #9a9a9c; 
-        }
-        
-        select {
-    background-color: #ffffff;
-}
-
-
-@media (max-width: 768px) {
-      .img-fluid {
-        width: 40%;
-      }
-      .btn {
-        padding: 15x 13px;
-        margin-top: 0px;
-        align-items:center;
-        position:fixed; top:-39px;
-        position:relative; left:-px;
+    /*CSS tailored for mobile view*/   
+  @media (max-width: 768px) {
+    .img-fluid {
+      width: 40%;}
+    .btn {
+      padding: 15x 13px;
+      margin-top: 0px;
+      align-items:center;
+      position:fixed; top:-39px;
+      position:relative; left:-px;
       }
     }
     .icon {
-    width: 30px
-    }
+      width: 30px}
  
-.result-box p label { 
-    font-weight: bold; /* Bolds categories */
-}
+    .result-box p label { 
+      font-weight: bold; /* Bolds categories */}
 
-.result-box p span {
-    background-color: #eee; 
-    padding: 8px; 
-    border-radius: 4px;
-}
-.heading {
-  text-align: center;
-  width: 100%;
-  justify-content: center;
-}
-fieldset {
-    border: 3px solid #132575;
-    padding: 20px;
-    border-radius: 8px;
-    width:100%;
-    scale: 85%;
-    margin-top: -30px;
-}    
+    .result-box p span {
+      background-color: #eee; 
+      padding: 8px; 
+      border-radius: 4px;}
+
+    .heading {
+      text-align: center;
+      width: 100%;
+      justify-content: center;}
+    
+    fieldset {
+      border: 3px solid #132575;
+      padding: 20px;
+      border-radius: 8px;
+      width:100%;
+      scale: 85%;
+      margin-top: -30px;}    
    </style>
 
 </head>
@@ -191,7 +193,6 @@ fieldset {
         alert('Please enter a numerical value for Distance Travelled.');
         return;
     }
-    
     // Creating a new result box for each submission
     var resultBox = document.createElement('div');
     resultBox.className = 'result-box';
@@ -208,7 +209,7 @@ fieldset {
     closeButton.onclick = function() {
         resultBox.remove(); // Removes result box
     };
-
+    // Formatting for resultBox
     resultBox.innerHTML = `
         <p><label>Date:</label> ${date}</p>
         <p><label>Exercise:</label> <span>${exerciseType}</span></p>
