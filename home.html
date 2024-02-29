@@ -7,16 +7,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
+    
+    /*Navigation Button CSS*/   
     .btn {margin-top:29px;
     padding: 20px 20px;
     position:relative; top:-10px;
     }
-
-    .input-box {margin-top: 0px;}
-    .stepheading {padding-top: 40px ;}
+    /*AeroFit Logo CSS*/   
     .img-fluid {padding-top: 15px;
     width: 80%; }
-    .na-box {
+
+    .stepAndCal-box {
             border: 3px solid #000; 
             padding: 20px;
             margin-bottom: px;
@@ -80,7 +81,7 @@
     }
 
 @media (max-width: 768px) {
-      .stepheading, .na-box {
+      .stepheading, .stepAndCal-box {
         font-size: 25px;
         padding-top: 15px;
       }
@@ -141,7 +142,7 @@
             <h1 class="stepheading">Steps Taken</h1>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="na-box">
+            <div class="stepAndCal-box">
               <h1 class="na-text">N/A</h1>
             </div>
           </div>      
@@ -150,7 +151,7 @@
             <h1 class="stepheading">Cals Burnt</h1>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <div id="calBox" class="na-box">
+            <div id="calBox" class="stepAndCal-box">
               <h1 class="na-text">N/A</h1>
             </div>
           </div>
@@ -231,7 +232,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 function updateStepCount() { 
-    document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
+    document.querySelector('.stepAndCal-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
 function updateCalCount() {
   document.getElementById('calBox').innerHTML = '<h1 class="na-text">' + calCount + " cals" + '</h1>' // Displays calCount in cals box
