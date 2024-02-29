@@ -1,5 +1,5 @@
 # 2024SDD-Rayan-AeroFit 
-AeroFit is a beginner-friendly and simplistic step-tracking app made to help beginners reach their fitness goals. The application comes with three prominent features, a step tracker, fitness logbook, and a timed challenge mode. 
+AeroFit is a beginner-friendly and simplistic step-tracking app made to help beginners reach their fitness goals. The application comes with three main features, a step tracker, fitness logbook, and a timed challenge mode. 
 
 ## Step Tracker 
 ### Core Features: 
