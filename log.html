@@ -7,66 +7,72 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
-.btn {margin-top:29px;
-    padding: 20px 20px;
-    position:relative; 
-    align-items: center;
-
-    }
+    
+    /*Navigation Button CSS*/   
+    .btn {
+      margin-top:29px;
+      padding: 20px 20px;
+      position:relative; 
+      align-items: center;}
+  
     .input-box {margin-top: 0px;}
     .stepheading {padding-top: 40px ;}
     .img-fluid {padding-top: 15px;
     width: 80%; }
 
     .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    background-color: darkred;
-    color: white;
-    border-radius: 50%;
-    text-align: center;
-    line-height: 25px;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 25px;
+      height: 25px;
+      background-color: darkred;
+      color: white;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 25px;
     }
+    /* Submit Button CSS */
     .darkButton {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    margin: 5px;
-    border:none;
-    border-radius: 7px;
-    scale:95%;
+      background-color: black;
+      color: white;
+      padding: 10px 20px;
+      margin: 5px;
+      border:none;
+      border-radius: 7px;
+      scale:95%;
     } 
-  body {
-    display: flex;
-    align-items: center;
-    background: #ffffff;
-    flex-direction: column;   
-        }
-
-  .result-box {
-    position: relative;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: rgb(246, 246, 246);
-    margin-top: 20px;
-    color: #333;  
-    max-width: 400px; 
+    
+    /*Entire contents within box CSS*/
+    body {
+      display: flex;
+      align-items: center;
+      background: #ffffff;
+      flex-direction: column;}
+  
+    /*Log Entries CSS*/
+    .result-box {
+      position: relative;
+      padding: 20px;
+      border-radius: 8px;
+      background-color: rgb(246, 246, 246);
+      margin-top: 20px;
+      color: #333;  
+      max-width: 400px; 
 }
-input, textarea {
-            padding: 10px;
-            margin: 8px;
-            border-radius: 4px;
-            border: 2px solid #9a9a9c; 
-        }
-        
-        select {
-    background-color: #ffffff;
+    /*Input Fields CSS*/
+    input, textarea {
+      padding: 10px;
+      margin: 8px;
+      border-radius: 4px;
+      border: 2px solid #9a9a9c; 
+}
+    /*Dropdown Menu CSS*/
+    select {
+      background-color: #ffffff;
 }
 
-
+    /*CSS tailored for mobile view*/
 @media (max-width: 768px) {
       .img-fluid {
         width: 40%;
@@ -84,7 +90,7 @@ input, textarea {
     }
  
 .result-box p label { 
-    font-weight: bold; /* Bolds categories */
+    font-weight: bold; /*Bolds categories*/
 }
 
 .result-box p span {
@@ -97,6 +103,7 @@ input, textarea {
   width: 100%;
   justify-content: center;
 }
+/*Border around Form CSS*/
 fieldset {
     border: 3px solid #132575;
     padding: 20px;
@@ -175,11 +182,6 @@ fieldset {
     </div>
 </div>
 </div>
-
-
-
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="script.js"></script>
   <script>
@@ -196,11 +198,10 @@ fieldset {
         alert('Please enter a numerical value for Distance Travelled.');
         return;
     }
-    
     // Creating a new result box for each submission
     var resultBox = document.createElement('div');
     resultBox.className = 'result-box';
-  // Getting current date
+    // Getting current date
     var today = new Date(); // Gets exact date
     var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear(); // Gets date in a day/month/year format
   
@@ -214,6 +215,7 @@ fieldset {
         resultBox.remove(); // Removes result box
     };
 
+    // Log Entry Formatting
     resultBox.innerHTML = `
         <p><label>Date:</label> ${date}</p>
         <p><label>Exercise:</label> <span>${exerciseType}</span></p>
@@ -221,6 +223,6 @@ fieldset {
         <p><label>Notes:</label> <span>${additionalNotes}</span></p>`;
         resultBox.appendChild(closeButton);
         var resultsContainer = document.getElementById('resultsContainer');
-        resultsContainer.prepend(resultBox);
+        resultsContainer.prepend(resultBox); // Prepending to place newer entry on top (Sorts Newest to Oldest)
     }
     </script>

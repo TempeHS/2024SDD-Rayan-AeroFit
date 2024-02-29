@@ -7,7 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
-.btn {margin-top:29px;
+    .btn {
+    margin-top:29px;
     padding: 20px 20px;
     position:relative; top:-13px;
     }
@@ -89,8 +90,8 @@
             <button onclick="startChallenge()">Accept Challenge</button>
         </div>
         <div id="challengeActiveBox" class="text-center" style="display: none;">
-          <h2 id="stepsRemaining"></h2> <!-- Displays steps remaining -->
-          <p id="timer"></p> <!-- Displays the timer -->
+          <h2 id="stepsRemaining"></h2>
+          <p id="timer"></p>
       </div>
 
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
@@ -111,14 +112,9 @@
 </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   <script src="script.js"></script>
-  <script>//Get values from local storage
-   var challengeStepCount = 0
-
-
-   
-   var stepGoalValue = parseInt(localStorage.getItem("stepGoal"));
-    var calGoalValue = parseInt(localStorage.getItem("calGoal"));
-  
+  <script>
+    
+    var challengeStepCount = 0
     // Generates Random Easy Challenge
     function makeEasyChallenge() {
     document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
@@ -135,7 +131,7 @@
   function makeMediumChallenge() {
     document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
     var challengeStep = Math.floor(Math.random() * (151 - 120) + 120); // Random step count from 120 to 150
-    var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 90 to 120 seconds
+    var challengeTime = Math.floor(Math.random() * (101 - 80) + 80); // Random time from 80 to 100 seconds
     document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
     document.getElementById('challengeBox').style.display = 'block';
     localStorage.setItem('challengeStep', challengeStep);
@@ -147,7 +143,7 @@
     document.getElementById('challengeActiveBox').style.display = 'none'; //Hide active box 
     var challengeStep = Math.floor(Math.random() * (201 - 170) + 170); // Random step count from 170 to 200
     var challengeTime = Math.floor(Math.random() * (91 - 60) + 60); // Random time from 60 to 90 seconds
-    document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`;
+    document.getElementById('challengeText').innerText = `Take ${challengeStep} steps in ${challengeTime} seconds.`; 
     document.getElementById('challengeBox').style.display = 'block';
     localStorage.setItem('challengeStep', challengeStep);
     localStorage.setItem('challengeTime', challengeTime);
@@ -156,7 +152,10 @@
     var accelLimit = 12; // Adjusted for better accuracy
     var lastUpdate = 0;
     var minTimeBetweenSteps = 200; // Minimum delay between steps in ms   
-function startChallengeStepTracking() {
+
+
+    // Uses Acceleremoter data to begin tracking steps
+    function startChallengeStepTracking() {
     window.addEventListener('devicemotion', (event) => { //
         var currentTime = new Date().getTime(); // Current time in ms 
         // Checks 3D Acceleration data
@@ -177,44 +176,42 @@ function startChallengeStepTracking() {
         }
     });
 }
+// Starts challenge by beginning step tracking also setting up active challenge display
 function startChallenge() {
     startChallengeStepTracking();
     var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
     var challengeTime = parseInt(localStorage.getItem('challengeTime'), 10);
     document.getElementById('challengeBox').style.display = 'none'; // Hide initial challenge box
     document.getElementById('challengeActiveBox').style.display = 'block'; // Show active challenge box
-    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`;
-    document.getElementById('timer').textContent = challengeTime + " seconds left";
-    startTimer(challengeTime);
+    document.getElementById('stepsRemaining').innerText = `${challengeStepCount} Steps Remaining`; // Display number of steps remaining
+    document.getElementById('timer').textContent = challengeTime + " seconds left"; // Display number of seconds left
+    startTimer(challengeTime); // Start countdown timer
 }
-var timerIntervalID = null;
+    var timerIntervalID = null;
 
-  function startTimer(duration) {
+// Start timer for the challenge duration
+function startTimer(duration) {
     if (timerIntervalID !== null) {
-        clearInterval(timerIntervalID);
+        clearInterval(timerIntervalID); // Clears existing timers to prevent conflict
     }
+    var timer = duration;
     
-    var timer = duration;
-    var timer = duration;
     timerIntervalID = setInterval(function () {
-        timer--;
-        document.getElementById('timer').textContent = timer + " seconds left";
+        timer--; // Decrements timer by 1 second
+        document.getElementById('timer').textContent = timer + " seconds left"; // Update display with new time
     
         //Check if times up
-        
         if (timer <= 0) {
             var challengeStepCount =  parseInt(localStorage.getItem('challengeStep'), 10);
-            clearInterval(timerIntervalID);
+            clearInterval(timerIntervalID); // Stops the timer
             if (challengeStepCount > 0) {
-                alert('Time’s up! Try again.');
+                alert('Time’s up! You failed. Try again.'); // Alert to user if challenge not complete
                 document.getElementById('challengeActiveBox').style.display = 'none'; //Closes the box 
             } else {
-                alert('Challenge complete! Well done!');
+                alert('Challenge complete! Well done!'); // Alert to user if challenge complete
             }
         }
     }, 1000); //Update timer every second (this is in ms)
 }
-
-
 
   </script>

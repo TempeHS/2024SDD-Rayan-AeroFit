@@ -7,60 +7,63 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="globalStyle.css">
     <style>
-    .btn {margin-top:29px;
-    padding: 20px 20px;
-    position:relative; top:-10px;
-    }
-
-    .input-box {margin-top: 0px;}
-    .stepheading {padding-top: 40px ;}
-    .img-fluid {padding-top: 15px;
-    width: 80%; }
-    .na-box {
-            border: 3px solid #000; 
-            padding: 20px;
-            margin-bottom: px;
-            width: 200px; 
-            border-radius: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 5px 2px 3px;
-        }
-
-        .gna-box {
-            border: 3px solid #000; 
-            padding: 17px;
-            margin-bottom: px;
-            width: 170px; 
-            border-radius: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 5px 2px 3px;
-        }
-    .na-text {
-     font-size: 24px; 
-    margin: 0; 
-    text-align: center;
-    }
-    .na2-text {
-     font-size: 24px; 
-    margin: 0;
-    text-align: center;
-    }
-    .goalheading {
-    font-size: 25px;
-    padding-top: 15px;
-
-}
-
-.stepheading {
-    font-size: 30px;
-    padding-top: 20px;
     
-}
+    /*Navigation Button CSS*/   
+    .btn {
+      margin-top:29px;
+      padding: 20px 20px;
+      position:relative; top:-10px;}
 
-#user-doc-button {
-  position: fixed;
+    /*AeroFit Logo CSS*/   
+    .img-fluid {
+      padding-top: 15px;
+      width: 80%; }
+
+    /*Step and Cal Box CSS*/   
+    .stepAndCal-box {
+      border: 3px solid #000; 
+      padding: 20px;
+      margin-bottom: px;
+      width: 200px; 
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 2px 3px;}
+
+     /*Goal Box CSS*/   
+    .gna-box {
+      border: 3px solid #000; 
+      padding: 17px;
+      width: 170px; 
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 2px 3px;}
+
+    /*Box Text CSS*/   
+    .na-text {
+      font-size: 24px; 
+      margin: 0; 
+      text-align: center;}
+
+    .na2-text {
+      font-size: 24px; 
+      margin: 0;
+      text-align: center;}
+  
+    /*Goal Heading CSS*/   
+    .goalheading {
+      font-size: 25px;
+      padding-top: 15px;}
+
+    /*Main Heading CSS*/   
+    .stepheading {
+      font-size: 30px;
+      padding-top: 20px;}
+
+    /*Help Button CSS*/   
+    #user-doc-button {
+      position: fixed;
         top: 10px;
         left: 10px;
         width: 45px;
@@ -68,29 +71,27 @@
         background-color: rgb(1, 0, 5);
         color: white;
         border-radius: 5px;
-        scale: 80%;
-
-}
-
-#user-doc-button img {
+        scale: 80%;}
+      
+    /*Help Button Icon CSS*/   
+    #user-doc-button img {
         width: 25px; 
         height: 25px; 
         margin-top: 10px;
         margin-left: -2px;
     }
 
-@media (max-width: 768px) {
-      .stepheading, .na-box {
+    /*CSS tailored for mobile view*/   
+  @media (max-width: 768px) {
+      .stepheading, .stepAndCal-box {
         font-size: 25px;
         padding-top: 15px;
       }
-      
-
       .img-fluid {
         width: 40%;
       }
       .goalheading{
-      font-size: 22px
+        font-size: 22px
 
       }
       .btn {
@@ -103,28 +104,26 @@
       }
 
     }
-    .icon {
-    width: 30px
-    }
+      .icon {
+        width: 30px}
+    
+    /*Permission Button Positioning*/   
+      .permission-button-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;}
 
-    .permission-button-container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-
-
-    #permissionButton {
-    background-color: #132575; /* AeroFit primary color */
-    color: #FFFFFF; 
-    border: none; 
-    padding: 12px 24px; 
-    font-size: 16px;
-    font-weight: bold; 
-    border-radius: 5px;
-}
+    /*Permission Button CSS*/   
+      #permissionButton {
+        background-color: #132575; /* AeroFit primary color */
+        color: #FFFFFF; 
+        border: none; 
+        padding: 12px 24px; 
+        font-size: 16px;
+        font-weight: bold; 
+        border-radius: 5px}
     </style>
 </head>
   <body>
@@ -141,7 +140,7 @@
             <h1 class="stepheading">Steps Taken</h1>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <div class="na-box">
+            <div class="stepAndCal-box">
               <h1 class="na-text">N/A</h1>
             </div>
           </div>      
@@ -150,7 +149,7 @@
             <h1 class="stepheading">Cals Burnt</h1>
           </div>
           <div class="col-sm-12 col-md-12 col-lg-12">
-            <div id="calBox" class="na-box">
+            <div id="calBox" class="stepAndCal-box">
               <h1 class="na-text">N/A</h1>
             </div>
           </div>
@@ -188,6 +187,7 @@
     <script src="script.js"></script>
 <script>
    
+  //Run on page load
   document.addEventListener('DOMContentLoaded', (event) => {
   // Load stored values or set to 0 none available
   stepCount = parseInt(localStorage.getItem('stepCount')) || 0;
@@ -196,51 +196,51 @@
   calGoalValue = parseInt(localStorage.getItem("calGoal")) || 0;
   updateStepCount(); // Update the displayed step count
   updateCalCount(); // Update the displayed calorie count
-  updateStepGoalBox(); 
+  updateStepGoalBox(); // Update the step goal box 
   checkPermissions(); // Checks User Permissions
-  startStepTracking();
+  startStepTracking(); // Begin step tracking
 });
  
-
-
-// Step detection settings
-var accelLimit = 12; // Adjusted for better accuracy
-var lastUpdate = 0;
-var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
-
+// Checks if user is on mobile and hasn't yet granted motion permissions
 function checkPermissions() {
 var permissionGranted = localStorage.getItem('motionPermissionsGranted');
   if (window.innerWidth <= 900 && permissionGranted !== 'true') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
   }
-
-
 }
-
-
-
+// Call requestMotionPermissions when permissionButon clicked
 document.getElementById('permissionButton').addEventListener('click', function() {
-        requestMotionPermissions();
+  requestMotionPermissions();
 });
     
-
+  // Commands that run on page load
 document.addEventListener('DOMContentLoaded', (event) => {
-  
-  
+  // If user is on desktop it alerts them.
+  function checkDesktopView() {
   if (window.innerWidth > 1025) { // Limit for desktop screen
         alert("Warning: App does not work on desktop. Please launch on mobile.");
-    }
+    }}
+  
   updateStepCount(); // Updates step count display when my page loads
   startStepTracking(); // Calls step tracking function
 });
 
+// Updates displayed stepCount with current stepCount value
 function updateStepCount() { 
-    document.querySelector('.na-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
-}
-function updateCalCount() {
-  document.getElementById('calBox').innerHTML = '<h1 class="na-text">' + calCount + " cals" + '</h1>' // Displays calCount in cals box
+    document.querySelector('.stepAndCal-box .na-text').innerText = stepCount + " Steps"; // Displays stepCount in steps box
 }
 
+// Updates displayed calCount with current calCount value
+function updateCalCount() {
+    document.getElementById('calBox').innerHTML = '<h1 class="na-text">' + calCount + " cals" + '</h1>' // Displays calCount in cals box
+}
+
+// Step detection settings
+var accelLimit = 12; // Acceleration sensititivity (Adjusted for better accuracy)
+var lastUpdate = 0;  
+var minTimeBetweenSteps = 200; // Minimum delay between steps in ms
+
+// Uses Acceleremoter data to begin tracking steps
 function startStepTracking() {
     window.addEventListener('devicemotion', (event) => { //
         var currentTime = new Date().getTime(); // Current time in ms 
@@ -254,23 +254,20 @@ function startStepTracking() {
                 updateStepCount(); // Updates step count display
                 updateStepGoalBox();
                 calConversion();
-                updateCalCount()
-              
+                updateCalCount() 
                 lastUpdate = currentTime;
             }
         }
     });
 }
 
-
+// Hides motion
 function hideMotionRequest() {
-  document.getElementById('permissionButton').style.display = 'none';
+    document.getElementById('permissionButton').style.display = 'none';
 }
 
-
-
+// Request Motion permissions for IOS
 function requestMotionPermissions() {
-    // Request Motion permissions for IOS
     if (typeof DeviceMotionEvent.requestPermission === 'function') {
         DeviceMotionEvent.requestPermission()
             .then(permissionState => {
@@ -311,7 +308,7 @@ function requestMotionPermissions() {
     `;
       }
       else {
-    document.getElementById("stepGoalBox").innerHTML = "<h1 class='na-text'>" + stepGoalValue + " Steps" + "</h1>";
+        document.getElementById("stepGoalBox").innerHTML = "<h1 class='na-text'>" + stepGoalValue + " Steps" + "</h1>";
 } 
 }
 //Display calorie values in my goal box
@@ -322,16 +319,15 @@ function requestMotionPermissions() {
   document.getElementById("stepGoalBox").innerHTML = `<h1 class='na-text'>${stepGoalValue} Steps</h1>`;
 
   
-//Step to Calorie conversions (ratio of cals:steps = 5:100) 
-
+//Step to Calorie conversions (ratio of cals:steps = 1:20) 
 stepCountOld = parseInt(localStorage.getItem('stepCountOld')) || 0;
 function calConversion() {
 // For every 20 steps, calCount++
       if (stepCount - stepCountOld == 20) {
-      stepCountOld = stepCount
-      calCount++
-      localStorage.setItem('calCount', calCount);
-      localStorage.setItem('stepCountOld', stepCountOld);
+        stepCountOld = stepCount
+        calCount++
+        localStorage.setItem('calCount', calCount);
+        localStorage.setItem('stepCountOld', stepCountOld);
       }
 
     }
