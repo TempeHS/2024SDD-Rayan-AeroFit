@@ -5,7 +5,7 @@ AeroFit is a beginner-friendly and simplistic step-tracking app made to help beg
 
 ![IMG_0801](https://github.com/TempeHS/2024SDD-Rayan-AeroFit/assets/136765042/aed2ecac-08d1-4017-bb5d-c89ae8d130a2)
 
-<img src="https://ibb.co/3s6bWYq"  width="60%" height="30%">
+<img src="https://ibb.co/3s6bWYq" width="60%" height="30%">
 
 
 
