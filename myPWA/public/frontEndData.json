@@ -1,0 +1,17 @@
+[
+    {
+        "stmt": "SELECT Your_phone_is_a_distraction, Watch_out_for_roads, Watch_your_step FROM safety_tips;",
+        "header": [
+            "Your_phone_is_a_distraction",
+            "Watch_out_for_roads",
+            "Watch_your_step"
+        ],
+        "rows": [
+            [
+                "Keep your phone in Do Not Disturb mode to avoid distractions.",
+                "Always be aware of your surroundings and follow traffic signals.",
+                "Stay vigilant of the path ahead to prevent trips and falls."
+            ]
+        ]
+    }
+]

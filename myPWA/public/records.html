@@ -67,6 +67,22 @@
     text-align: center;
     border-radius: 10px;
     }
+    .safetyButton{
+scale:50%;
+justify-content: center;
+align-items: center;
+width: 50%;
+margin-top: auto;
+background-color: #7a7a84;
+    }
+
+    .safeheading{
+        margin-top: 60px;
+        scale: 80%;
+    }
+    
+
+
    </style>
 
 </head>
@@ -93,7 +109,12 @@
           <h2 id="stepsRemaining"></h2>
           <p id="timer"></p>
       </div>
+      <h2 class = "safeheading">Stay Safe while Running</h2>
 
+      <button class = "safetyButton" id="btnPhone">Safety Tip 1</button>
+      <button class = "safetyButton" id="btnRoads">Safety Tip 2</button>
+      <button class = "safetyButton" id="btnStep">Safety Tip 3</button>
+    <div id="tipDisplay"></div>
   <div class="row mt-5 mb-0 text-center d-flex justify-content-center">
     <div class="col-sm-1 col-2">
         <a href="home.html" class="btn btn-dark">
@@ -114,6 +135,37 @@
   <script src="script.js"></script>
   <script>
     
+    // SQL to JSON to FrontEnd Display:
+    let safetyTips = [];
+    fetch('./frontEndData.json')
+    .then(response => response.json())
+    .then(jsonData => {
+    // Assuming jsonData structure is as provided before
+    const dataObject = jsonData[0];
+    safetyTips = dataObject.rows[0]; // Assuming only one row of tips
+
+    // Set default display to the first tip
+    displayTip(0);
+})
+.catch(function (err) {
+    console.log('Error fetching frontEndData.json:', err);
+});
+
+// Function to display a specific tip
+function displayTip(index) {
+    const tipDisplay = document.getElementById('tipDisplay');
+    tipDisplay.textContent = safetyTips[index] || 'Tip not available';
+}
+
+// Button event listeners
+document.getElementById('btnPhone').addEventListener('click', () => displayTip(0));
+document.getElementById('btnRoads').addEventListener('click', () => displayTip(1));
+document.getElementById('btnStep').addEventListener('click', () => displayTip(2));
+
+
+
+
+
     var challengeStepCount = 0
     // Generates Random Easy Challenge
     function makeEasyChallenge() {

@@ -1,9 +1,40 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
 const app = express();
-app.use(express.static(path.join(__dirname, "public")));
+const port = 3000;
+const sqlite3 = require('sqlite3').verbose();
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "public/index.html"));
+app.use(express.static('public')); 
+
+app.get('/extensions', (req, res) => {
+  const dbPath = '/Users/rayanrashid/Documents/GitHub/2024SDD-Rayan-AeroFit/myPWA/.database/datasource.db';
+  let db = new sqlite3.Database(dbPath, sqlite3.OPEN_READONLY, (err) => {
+    if (err) {
+      console.error(err.message);
+      res.status(500).send('Error connecting to the database');
+      return;
+    }
+    console.log('Connected to the SQLite database.');
+  });
+
+  const sql = `SELECT * FROM extension`;
+
+  db.all(sql, [], (err, rows) => {
+    if (err) {
+      console.error(err.message);
+      res.status(500).send('Error executing SQL query');
+    } else {
+      res.json(rows); 
+    }
+  });
+
+  db.close((err) => {
+    if (err) {
+      console.error(err.message);
+    }
+    console.log('Closed the database connection.');
+  });
 });
-app.listen(8000, () => console.log("Server is running on Port 8000, visit http://localhost:8000/ or http://127.0.0.1:8000 to access your website") );
+
+app.listen(port, () => {
+  console.log(`Server running at http://localhost:8000}/`);
+});
