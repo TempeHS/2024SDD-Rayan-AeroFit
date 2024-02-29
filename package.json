@@ -1,0 +1,12 @@
+{
+  "name": "2024sdd-rayan-aerofit",
+  "version": "1.0.0",
+  "description": "AeroFit is a beginner-friendly and simplistic step-tracking app made to help beginners reach their fitness goals. The application comes with three main features, a step tracker, fitness logbook, and a timed challenge mode.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
