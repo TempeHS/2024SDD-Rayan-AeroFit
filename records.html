@@ -187,9 +187,9 @@ function startChallenge() {
     document.getElementById('timer').textContent = challengeTime + " seconds left";
     startTimer(challengeTime);
 }
-var timerIntervalID = null;
+    var timerIntervalID = null;
 
-  function startTimer(duration) {
+function startTimer(duration) {
     if (timerIntervalID !== null) {
         clearInterval(timerIntervalID);
     }
@@ -214,7 +214,6 @@ var timerIntervalID = null;
         }
     }, 1000); //Update timer every second (this is in ms)
 }
-
 
 
   </script>

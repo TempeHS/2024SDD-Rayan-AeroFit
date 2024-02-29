@@ -213,23 +213,19 @@ var permissionGranted = localStorage.getItem('motionPermissionsGranted');
   if (window.innerWidth <= 900 && permissionGranted !== 'true') {
     document.getElementById('permissionButtonContainer').style.display = 'block';
   }
-
-
 }
-
-
-
 document.getElementById('permissionButton').addEventListener('click', function() {
         requestMotionPermissions();
 });
     
-
+  // Commands that run on page load
 document.addEventListener('DOMContentLoaded', (event) => {
-  
-  
+  // If user is on desktop it alerts them.
+  function checkDesktopView() {
   if (window.innerWidth > 1025) { // Limit for desktop screen
         alert("Warning: App does not work on desktop. Please launch on mobile.");
-    }
+    }}
+  
   updateStepCount(); // Updates step count display when my page loads
   startStepTracking(); // Calls step tracking function
 });
@@ -262,12 +258,10 @@ function startStepTracking() {
     });
 }
 
-
+// Hides motion
 function hideMotionRequest() {
   document.getElementById('permissionButton').style.display = 'none';
 }
-
-
 
 function requestMotionPermissions() {
     // Request Motion permissions for IOS
@@ -322,8 +316,7 @@ function requestMotionPermissions() {
   document.getElementById("stepGoalBox").innerHTML = `<h1 class='na-text'>${stepGoalValue} Steps</h1>`;
 
   
-//Step to Calorie conversions (ratio of cals:steps = 5:100) 
-
+//Step to Calorie conversions (ratio of cals:steps = 1:20) 
 stepCountOld = parseInt(localStorage.getItem('stepCountOld')) || 0;
 function calConversion() {
 // For every 20 steps, calCount++
