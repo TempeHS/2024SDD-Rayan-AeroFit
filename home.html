@@ -9,59 +9,61 @@
     <style>
     
     /*Navigation Button CSS*/   
-    .btn {margin-top:29px;
-    padding: 20px 20px;
-    position:relative; top:-10px;
-    }
+    .btn {
+      margin-top:29px;
+      padding: 20px 20px;
+      position:relative; top:-10px;}
+
     /*AeroFit Logo CSS*/   
-    .img-fluid {padding-top: 15px;
-    width: 80%; }
+    .img-fluid {
+      padding-top: 15px;
+      width: 80%; }
 
+    /*Step and Cal Box CSS*/   
     .stepAndCal-box {
-            border: 3px solid #000; 
-            padding: 20px;
-            margin-bottom: px;
-            width: 200px; 
-            border-radius: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 5px 2px 3px;
-        }
+      border: 3px solid #000; 
+      padding: 20px;
+      margin-bottom: px;
+      width: 200px; 
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 2px 3px;}
 
-        .gna-box {
-            border: 3px solid #000; 
-            padding: 17px;
-            margin-bottom: px;
-            width: 170px; 
-            border-radius: 10px;
-            margin-left: auto;
-            margin-right: auto;
-            box-shadow: 5px 2px 3px;
-        }
+     /*Goal Box CSS*/   
+    .gna-box {
+      border: 3px solid #000; 
+      padding: 17px;
+      width: 170px; 
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 5px 2px 3px;}
+
+    /*Box Text CSS*/   
     .na-text {
-     font-size: 24px; 
-    margin: 0; 
-    text-align: center;
-    }
+      font-size: 24px; 
+      margin: 0; 
+      text-align: center;}
+
     .na2-text {
-     font-size: 24px; 
-    margin: 0;
-    text-align: center;
-    }
+      font-size: 24px; 
+      margin: 0;
+      text-align: center;}
+  
+    /*Goal Heading CSS*/   
     .goalheading {
-    font-size: 25px;
-    padding-top: 15px;
+      font-size: 25px;
+      padding-top: 15px;}
 
-}
+    /*Main Heading CSS*/   
+    .stepheading {
+      font-size: 30px;
+      padding-top: 20px;}
 
-.stepheading {
-    font-size: 30px;
-    padding-top: 20px;
-    
-}
-
-#user-doc-button {
-  position: fixed;
+    /*Help Button CSS*/   
+    #user-doc-button {
+      position: fixed;
         top: 10px;
         left: 10px;
         width: 45px;
@@ -69,29 +71,27 @@
         background-color: rgb(1, 0, 5);
         color: white;
         border-radius: 5px;
-        scale: 80%;
-
-}
-
-#user-doc-button img {
+        scale: 80%;}
+      
+    /*Help Button Icon CSS*/   
+    #user-doc-button img {
         width: 25px; 
         height: 25px; 
         margin-top: 10px;
         margin-left: -2px;
     }
 
-@media (max-width: 768px) {
+    /*CSS tailored for mobile view*/   
+  @media (max-width: 768px) {
       .stepheading, .stepAndCal-box {
         font-size: 25px;
         padding-top: 15px;
       }
-      
-
       .img-fluid {
         width: 40%;
       }
       .goalheading{
-      font-size: 22px
+        font-size: 22px
 
       }
       .btn {
@@ -104,28 +104,26 @@
       }
 
     }
-    .icon {
-    width: 30px
-    }
+      .icon {
+        width: 30px}
+    
+    /*Permission Button Positioning*/   
+      .permission-button-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: none;}
 
-    .permission-button-container {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
-        }
-
-
-    #permissionButton {
-    background-color: #132575; /* AeroFit primary color */
-    color: #FFFFFF; 
-    border: none; 
-    padding: 12px 24px; 
-    font-size: 16px;
-    font-weight: bold; 
-    border-radius: 5px;
-}
+    /*Permission Button CSS*/   
+      #permissionButton {
+        background-color: #132575; /* AeroFit primary color */
+        color: #FFFFFF; 
+        border: none; 
+        padding: 12px 24px; 
+        font-size: 16px;
+        font-weight: bold; 
+        border-radius: 5px}
     </style>
 </head>
   <body>
